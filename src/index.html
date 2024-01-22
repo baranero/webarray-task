@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="<%= htmlWebpackPlugin.options.metaDesc %>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header
+      class="flex z-20 justify-between fixed w-full items-center py-5 px-[15px] header bg-white"
+    >
+      <img class="" src="<%= require('./assets/images/logo.png') %>" alt="Logo" />
+      <img
+        class="h-[31px]"
+        src="<%= require('./assets/images/mobile-nav-toggler.png') %>"
+        alt="Mobile Nav Toggler"
+      />
+    </header>
+
+    <section class="banner relative pt-7">
+      <img
+        class="absolute z-10 left-2 bottom-[76px]"
+        src="<%= require('./assets/images/banner_shape05.png') %>"
+        alt="Banner shape"
+      />
+      <div class="text-center banner-content">
+        <button class="banner-content__button">Social Media Marketing That Works</button>
+        <h2 class="banner-content__heading mt-5">Save Time</h2>
+        <h2 class="banner-content__heading my-4">Build Connections</h2>
+        <h2 class="banner-content__heading mb-8">Increase Profits</h2>
+      </div>
+      <div class="grid grid-cols-2 grid-rows-2 mx-[15px]">
+        <img
+          class="w-full pr-2 pb-1"
+          src="<%= require('./assets/images/banner-image-1.png') %>"
+          alt="Banner image"
+        />
+        <img
+          class="row-span-2 h-full"
+          src="<%= require('./assets/images/banner-image-3.png') %>"
+          alt="Banner image"
+        />
+        <img
+          class="w-full pr-2 pt-1"
+          src="<%= require('./assets/images/banner-image-2.png') %>"
+          alt="Banner image"
+        />
+      </div>
+      <div class="mx-[15px] mt-8">
+        <div class="flex justify-between mx-[34px]">
+          <img src="<%= require('./assets/images/linkedin-icon.png') %>" alt="Linkedin Icon" />
+          <img src="<%= require('./assets/images/facebook-icon.png') %>" alt="Facebook Icon" />
+          <img src="<%= require('./assets/images/instagram-icon.png') %>" alt="Instagram Icon" />
+          <img src="<%= require('./assets/images/twitter-icon.png') %>" alt="Twitter Icon" />
+          <img src="<%= require('./assets/images/google-icon.png') %>" alt="Google Icon" />
+          <img src="<%= require('./assets/images/youtube-icon.png') %>" alt="Youtube Icon" />
+        </div>
+        <img src="" alt="" />
+        <button
+          class="mt-10 w-full text-center leading-4 py-[23px] px-[119.5px] rounded-[20px] bg-[#3482FF] text-white"
+        >
+          View Our Plans
+        </button>
+      </div>
+    </section>
+    <!-- Brand area -->
+    <div
+      id="brand-area-carousel"
+      class="bg-[#1D1D25] logo-carousel translate-y-[80.68px] flex mx-[15px] py-[62.5px] relative mt-[9.32px] rounded-[20px]"
+    >
+      <div class="logo-images">
+        <img
+          src="<%= require('./assets/images/entrepreneur-logo.png') %>"
+          alt="Entrepreneur Icon"
+        />
+        <img src="<%= require('./assets/images/google-logo.png') %>" alt="Google Icon" />
+
+        <img
+          src="<%= require('./assets/images/entrepreneur-logo.png') %>"
+          alt="Entrepreneur Icon"
+        />
+        <img src="<%= require('./assets/images/google-logo.png') %>" alt="Google Icon" />
+      </div>
+    </div>
+
+    <section class="bg-[#292F3E] px-[15px] pt-[144.78px]">
+      <div class="flex flex-col items-center justify-center py-7">
+        <div class="stat-card">
+          <span class="stat-number text-[#F76766]">252</span>
+          <p class="stat-text">Offices</p>
+          <img
+            class="left-0"
+            src="<%= require('./assets/images/office-icon.png') %>"
+            alt="Office Icon"
+          />
+        </div>
+        <div class="stat-card">
+          <span class="stat-number text-[#265FDB]">10</span>
+          <p class="stat-text">Workers</p>
+          <img
+            class="right-0"
+            src="<%= require('./assets/images/workers-icon.png') %>"
+            alt="Workers Icon"
+          />
+        </div>
+        <div class="stat-card">
+          <span class="stat-number text-[#57C0CE]">15K</span>
+          <p class="stat-text">Customers</p>
+          <img
+            class="left-0"
+            src="<%= require('./assets/images/customers-icon.png') %>"
+            alt="Customers Icon"
+          />
+        </div>
+        <div class="stat-card">
+          <span class="stat-number text-[#A666F7]">1300+</span>
+          <p class="stat-text">Projects</p>
+          <img
+            class="left-0"
+            src="<%= require('./assets/images/projects-icon.png') %>"
+            alt="Projects Icon"
+          />
+        </div>
+      </div>
+      <div class="mt-[50px] text-center">
+        <div class="text-white text-[45.7px] leading-[54.8px] font-bold">
+          <h3 class="text-[#FFD437] text-xl leading-[34px] mb-5 font-medium">
+            Social Media Management is
+          </h3>
+          <h2>Building<br />Brands</h2>
+          <h2>Creating Connections</h2>
+          <h2>Driving Sales</h2>
+        </div>
+        <div class="text-[19.2px] leading-[32.6px] text-[#BBBBBB] font-light mt-7">
+          <p class="mb-[15px]">
+            Social Media is <em>more than just posting</em> and showing off how many followers you
+            have. It's a valuable addition to your marketing strategy that <u>builds trust</u> and
+            <u>creates connections</u> with potential customers to <u>drive sales</u> and
+            <u>increase your revenue.</u>
+          </p>
+          <p class="mb-[15px]">
+            Save your time and money by partnering with us and start seeing results that give you
+            the <u>highest return on investment.</u>
+          </p>
+          <p>After all; when you grow, we grow together.</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="root"></div>
+  </body>
+</html>
