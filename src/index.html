@@ -20,10 +20,26 @@
     >
       <img class="" src="<%= require('./assets/images/logo.png') %>" alt="Logo" />
       <img
-        class="h-[31px]"
-        src="<%= require('./assets/images/mobile-nav-toggler.png') %>"
-        alt="Mobile Nav Toggler"
-      />
+  class="h-[31px] mobile-nav-toggler"
+  src="<%= require('./assets/images/mobile-nav-toggler.png') %>"
+  alt="Mobile Nav Toggler"
+  onclick="toggleMobileMenu()"
+/>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="mobile-menu hidden">
+  <nav class="flex flex-col h-screen text-base font-medium text-[#0B0B0B]">
+    <div class="flex justify-between py-[30px] px-[25px]">
+      <img class="w-[126px]" src="<%= require('./assets/images/logo.png') %>" alt="Logo" />
+      <img class="h-5 mt-[3px]" src="<%= require('./assets/images/close-icon.png') %>" alt="Close button" onclick="toggleMobileMenu()"/>
+    </div>
+    <a class="mobile-menu-link" href="#management">Management</a>
+    <a class="mobile-menu-link" href="#marketing">Marketing</a>
+    <a class="mobile-menu-link" href="#increase-sales">Increase Sales</a>
+    <a class="mobile-menu-link" href="services">Services</a>
+    <a class="mobile-menu-link border-b" href="plans-and-pricing">Plans & Pricing</a>
+  </nav>
+</div>
     </header>
 
     <section class="banner relative pt-7">
@@ -55,7 +71,7 @@
           alt="Banner image"
         />
       </div>
-      <div class="mx-[15px] mt-8">
+      <div id="banner-section" class="mx-[15px] mt-8">
         <div class="flex justify-between mx-[34px]">
           <img src="<%= require('./assets/images/linkedin-icon.png') %>" alt="Linkedin Icon" />
           <img src="<%= require('./assets/images/facebook-icon.png') %>" alt="Facebook Icon" />
@@ -64,12 +80,6 @@
           <img src="<%= require('./assets/images/google-icon.png') %>" alt="Google Icon" />
           <img src="<%= require('./assets/images/youtube-icon.png') %>" alt="Youtube Icon" />
         </div>
-        <img src="" alt="" />
-        <button
-          class="mt-10 w-full text-center leading-4 py-[23px] px-[119.5px] rounded-[20px] bg-[#3482FF] text-white"
-        >
-          View Our Plans
-        </button>
       </div>
     </section>
     <!-- Brand area -->
@@ -77,18 +87,35 @@
       id="brand-area-carousel"
       class="bg-[#1D1D25] logo-carousel translate-y-[80.68px] flex mx-[15px] py-[62.5px] relative mt-[9.32px] rounded-[20px]"
     >
-      <div class="logo-images">
-        <img
-          src="<%= require('./assets/images/entrepreneur-logo.png') %>"
-          alt="Entrepreneur Icon"
-        />
-        <img src="<%= require('./assets/images/google-logo.png') %>" alt="Google Icon" />
+      <div class=" h-[42px] flex justify-around">
 
-        <img
-          src="<%= require('./assets/images/entrepreneur-logo.png') %>"
-          alt="Entrepreneur Icon"
-        />
-        <img src="<%= require('./assets/images/google-logo.png') %>" alt="Google Icon" />
+        <div class="logo-images">
+          <img
+          class="h-full w-full"
+            src="<%= require('./assets/images/entrepreneur-logo.png') %>"
+            alt="Entrepreneur Icon"
+          />
+          <img class="h-full w-full" src="<%= require('./assets/images/google-logo.png') %>" alt="Google Icon" />
+          <img
+          class="h-full w-full"
+            src="<%= require('./assets/images/facebook-marketing-partners-badge.png') %>"
+            alt="Facebook Icon"
+          />
+          <img class="h-full w-full" src="<%= require('./assets/images/meta-logo.png') %>" alt="Meta Icon" />
+          <img
+          class="h-full w-full"
+            src="<%= require('./assets/images/entrepreneur-logo.png') %>"
+            alt="Entrepreneur Icon"
+          />
+          <img class="h-full w-full" src="<%= require('./assets/images/google-logo.png') %>" alt="Google Icon" />
+          <img
+          class="h-full w-full"
+            src="<%= require('./assets/images/facebook-marketing-partners-badge.png') %>"
+            alt="Facebook Icon"
+          />
+          <img class="h-full w-full" src="<%= require('./assets/images/meta-logo.png') %>" alt="Meta Icon" />
+        </div>
+
       </div>
     </div>
 
@@ -113,7 +140,10 @@
           />
         </div>
         <div class="stat-card">
-          <span class="stat-number text-[#57C0CE]">15K</span>
+          <div class="z-20">
+            <span class="stat-number text-[#57C0CE]">15</span
+            ><span class="stat-number text-[#57C0CE]">K</span>
+          </div>
           <p class="stat-text">Customers</p>
           <img
             class="left-0"
@@ -122,7 +152,10 @@
           />
         </div>
         <div class="stat-card">
-          <span class="stat-number text-[#A666F7]">1300+</span>
+          <div class="z-20">
+            <span class="stat-number text-[#A666F7]">1300</span
+            ><span class="stat-number text-[#A666F7]">+</span>
+          </div>
           <p class="stat-text">Projects</p>
           <img
             class="left-0"
@@ -131,16 +164,14 @@
           />
         </div>
       </div>
-      <div class="mt-[50px] text-center">
-        <div class="text-white text-[45.7px] leading-[54.8px] font-bold">
-          <h3 class="text-[#FFD437] text-xl leading-[34px] mb-5 font-medium">
-            Social Media Management is
-          </h3>
+      <div id="stats-section" class="mt-[50px] text-center">
+        <div class="text-white h2-title">
+          <sup class="text-[#FFD437] sup-title"> Social Media Management is </sup>
           <h2>Building<br />Brands</h2>
           <h2>Creating Connections</h2>
           <h2>Driving Sales</h2>
         </div>
-        <div class="text-[19.2px] leading-[32.6px] text-[#BBBBBB] font-light mt-7">
+        <div class="paragraph-text text-[#BBBBBB] mt-7">
           <p class="mb-[15px]">
             Social Media is <em>more than just posting</em> and showing off how many followers you
             have. It's a valuable addition to your marketing strategy that <u>builds trust</u> and
@@ -154,6 +185,31 @@
           <p>After all; when you grow, we grow together.</p>
         </div>
       </div>
+      <p class="text-[#3486FA] text-center leading-[26.8px] pt-[24.85px] pb-[63.88px]">
+        How We Can Help
+      </p>
+    </section>
+
+    <section class="mt-[29px]">
+      <img
+        class="rotating-element ml-[34.36px]"
+        src="<%= require('./assets/images/project_shape01.png') %>"
+        alt="Shape"
+      />
+      <div class="text-center mx-[15px]">
+        <sup class="text-[#FF7012] sup-title">Our Expertise is Your Success</sup>
+        <h2 class="h2-title">Struggling to Make Engaging Content?</h2>
+        <p class="paragraph-text mt-[26.19px] text-[#727272]">
+          From the research and planning to
+creating striking images and videos
+for your posts, our service focuses on
+creating a <u class="text-[#191919]">unique voice</u> for your
+brand that will <u class="text-[#191919]">engage your audience</u>
+and keep them coming back for
+more!
+        </p>
+      </div>
+      
     </section>
 
     <div id="root"></div>

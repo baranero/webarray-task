@@ -11,7 +11,32 @@ html {
     box-shadow: 0 10px 15px 0 #1919191a;
 }
 
+/* Styl dla menu mobilnego */
+.mobile-menu {
+    display: block; /* Zmiana na block, aby umożliwić animację */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    transform: translateX(100%); /* Ukrywa menu poza ekranem */
+    transition: transform 0.3s ease; /* Animacja wsunięcia */
+  }
+  
+  
+  /* Styl, aby pokazać menu */
+  .mobile-menu.show {
+    transform: translateX(0); /* Przesuwa menu do widocznej pozycji */
+  }
 
+  .mobile-menu-link {
+    padding: 10px 0 10px 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.10);
+  }
+  
+  /* Dalsze style dla linków, animacji itp. */
+  
 
 .banner-content__heading {
     font-size: 35.2px;
@@ -41,29 +66,27 @@ html {
 
 .logo-carousel {
     overflow: hidden;
-    position: relative;
     box-shadow: 0 44px 64px 0 rgba(0, 0, 0, 0.15);
 }
 
 .logo-images {
-    display: inline-flex;
-    animation: scroll 30s linear infinite;
+    display: flex;
+    align-items: center;
+    animation: scroll 10s linear infinite;
 }
 
 .logo-images img {
-    width: 100px; /* Zmodyfikuj szerokość zgodnie z rozmiarem logo */
-    height: auto;
-    margin-right: 20px; /* Odstęp między logo */
+    margin-right: 44px; /* Odstęp między logo */
 }
 
 @keyframes scroll {
     0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+  }
 
 .stat-card {
     background-color: #fff;
@@ -97,3 +120,37 @@ html {
     bottom: 0;
   }
   
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .rotating-element {
+    animation: rotateAnimation 2s ease-in-out infinite;
+  }
+  
+  .sup-title {
+    font-size: 16px;
+    line-height: 34px;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .h2-title {
+    font-size: 45.7px;
+    line-height: 54.8px;
+    font-weight: 700;
+  }
+
+  .paragraph-text {
+    font-size: 19.2px;
+    line-height: 32.6px;
+    font-weight: 300;
+  }
