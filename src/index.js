@@ -1,6 +1,9 @@
 import './style.css'
 import Button from './components/button';
 import ScrollReveal from 'scrollreveal';
+import Swiper from 'swiper';
+import { Autoplay } from 'swiper/modules'
+
 
 window.toggleMobileMenu = function() {
     let menu = document.getElementById("mobileMenu");
@@ -43,3 +46,13 @@ sr.reveal('.stat-card', {
 const contactUsButton = Button('Contact Us');
 
 document.getElementById('stats-section').appendChild(contactUsButton);
+
+
+const swiper = new Swiper('.swiper-container', {
+    modules: [Autoplay],
+    loop: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+  });
