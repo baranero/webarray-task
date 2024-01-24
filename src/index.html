@@ -16,30 +16,35 @@
   </head>
   <body>
     <header
-      class="flex z-20 justify-between fixed w-full items-center py-5 px-[15px] header bg-white"
+      class="flex z-30 justify-between fixed w-full items-center py-5 px-[15px] header bg-white"
     >
       <img class="" src="<%= require('./assets/images/logo.png') %>" alt="Logo" />
       <img
-  class="h-[31px] mobile-nav-toggler"
-  src="<%= require('./assets/images/mobile-nav-toggler.png') %>"
-  alt="Mobile Nav Toggler"
-  onclick="toggleMobileMenu()"
-/>
+        class="h-[31px] mobile-nav-toggler"
+        src="<%= require('./assets/images/mobile-nav-toggler.png') %>"
+        alt="Mobile Nav Toggler"
+        onclick="toggleMobileMenu()"
+      />
 
-<!-- Mobile Menu -->
-<div id="mobileMenu" class="mobile-menu hidden">
-  <nav class="flex flex-col h-screen text-base font-medium text-[#0B0B0B]">
-    <div class="flex justify-between py-[30px] px-[25px]">
-      <img class="w-[126px]" src="<%= require('./assets/images/logo.png') %>" alt="Logo" />
-      <img class="h-5 mt-[3px]" src="<%= require('./assets/images/close-icon.png') %>" alt="Close button" onclick="toggleMobileMenu()"/>
-    </div>
-    <a class="mobile-menu-link" href="#management">Management</a>
-    <a class="mobile-menu-link" href="#marketing">Marketing</a>
-    <a class="mobile-menu-link" href="#increase-sales">Increase Sales</a>
-    <a class="mobile-menu-link" href="services">Services</a>
-    <a class="mobile-menu-link border-b" href="plans-and-pricing">Plans & Pricing</a>
-  </nav>
-</div>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="mobile-menu hidden">
+        <nav class="flex flex-col h-screen text-base font-medium text-[#0B0B0B]">
+          <div class="flex justify-between py-[30px] px-[25px]">
+            <img class="w-[126px]" src="<%= require('./assets/images/logo.png') %>" alt="Logo" />
+            <img
+              class="h-5 mt-[3px]"
+              src="<%= require('./assets/images/close-icon.png') %>"
+              alt="Close button"
+              onclick="toggleMobileMenu()"
+            />
+          </div>
+          <a class="mobile-menu-link" href="#management">Management</a>
+          <a class="mobile-menu-link" href="#marketing">Marketing</a>
+          <a class="mobile-menu-link" href="#increase-sales">Increase Sales</a>
+          <a class="mobile-menu-link" href="services">Services</a>
+          <a class="mobile-menu-link border-b" href="plans-and-pricing">Plans & Pricing</a>
+        </nav>
+      </div>
     </header>
 
     <section class="banner relative pt-7">
@@ -72,7 +77,7 @@
         />
       </div>
       <div id="banner-section" class="mx-[15px] mt-8">
-        <div class="flex justify-between mx-[34px]">
+        <div class="flex justify-between mx-[34px] mb-10">
           <img src="<%= require('./assets/images/linkedin-icon.png') %>" alt="Linkedin Icon" />
           <img src="<%= require('./assets/images/facebook-icon.png') %>" alt="Facebook Icon" />
           <img src="<%= require('./assets/images/instagram-icon.png') %>" alt="Instagram Icon" />
@@ -87,35 +92,49 @@
       id="brand-area-carousel"
       class="bg-[#1D1D25] logo-carousel translate-y-[80.68px] flex mx-[15px] py-[62.5px] relative mt-[9.32px] rounded-[20px]"
     >
-      <div class=" h-[42px] flex justify-around">
-
+      <div class="h-[42px] flex justify-around">
         <div class="logo-images">
           <img
-          class="h-full w-full"
+            class="h-full w-full"
             src="<%= require('./assets/images/entrepreneur-logo.png') %>"
             alt="Entrepreneur Icon"
           />
-          <img class="h-full w-full" src="<%= require('./assets/images/google-logo.png') %>" alt="Google Icon" />
           <img
-          class="h-full w-full"
+            class="h-full w-full"
+            src="<%= require('./assets/images/google-logo.png') %>"
+            alt="Google Icon"
+          />
+          <img
+            class="h-full w-full"
             src="<%= require('./assets/images/facebook-marketing-partners-badge.png') %>"
             alt="Facebook Icon"
           />
-          <img class="h-full w-full" src="<%= require('./assets/images/meta-logo.png') %>" alt="Meta Icon" />
           <img
-          class="h-full w-full"
+            class="h-full w-full"
+            src="<%= require('./assets/images/meta-logo.png') %>"
+            alt="Meta Icon"
+          />
+          <img
+            class="h-full w-full"
             src="<%= require('./assets/images/entrepreneur-logo.png') %>"
             alt="Entrepreneur Icon"
           />
-          <img class="h-full w-full" src="<%= require('./assets/images/google-logo.png') %>" alt="Google Icon" />
           <img
-          class="h-full w-full"
+            class="h-full w-full"
+            src="<%= require('./assets/images/google-logo.png') %>"
+            alt="Google Icon"
+          />
+          <img
+            class="h-full w-full"
             src="<%= require('./assets/images/facebook-marketing-partners-badge.png') %>"
             alt="Facebook Icon"
           />
-          <img class="h-full w-full" src="<%= require('./assets/images/meta-logo.png') %>" alt="Meta Icon" />
+          <img
+            class="h-full w-full"
+            src="<%= require('./assets/images/meta-logo.png') %>"
+            alt="Meta Icon"
+          />
         </div>
-
       </div>
     </div>
 
@@ -171,7 +190,7 @@
           <h2>Creating Connections</h2>
           <h2>Driving Sales</h2>
         </div>
-        <div class="paragraph-text text-[#BBBBBB] mt-7">
+        <div class="paragraph-text text-[#BBBBBB] mt-7 mb-[15.54px]">
           <p class="mb-[15px]">
             Social Media is <em>more than just posting</em> and showing off how many followers you
             have. It's a valuable addition to your marketing strategy that <u>builds trust</u> and
@@ -200,34 +219,120 @@
         <sup class="text-[#FF7012] sup-title">Our Expertise is Your Success</sup>
         <h2 class="h2-title">Struggling to Make Engaging Content?</h2>
         <p class="paragraph-text mt-[26.19px] text-[#727272]">
-          From the research and planning to
-creating striking images and videos
-for your posts, our service focuses on
-creating a <u class="text-[#191919]">unique voice</u> for your
-brand that will <u class="text-[#191919]">engage your audience</u>
-and keep them coming back for
-more!
+          From the research and planning to creating striking images and videos for your posts, our
+          service focuses on creating a <u class="text-[#191919]">unique voice</u> for your brand
+          that will <u class="text-[#191919]">engage your audience</u>
+          and keep them coming back for more!
         </p>
       </div>
-      <div class="swiper-container">
+      <div class="swiper-container ml-[15px]">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="<%= require('./assets/images/home-insurance.png.png') %>" alt="Home insurance">
-            </div>
-            <div class="swiper-slide">
-                <img src="<%= require('./assets/images/pistachio-madness.png.png') %>" alt="Pistachio madness">
-            </div>
-            <div class="swiper-slide">
-                <img src="<%= require('./assets/images/reels.png') %>" alt="Reels">
-            </div>
-            <div class="swiper-slide">
-                <img src="<%= require('./assets/images/home-insurance.png.png') %>" alt="Home insurance again">
-            </div>
-
+          <div class="swiper-slide">
+            <img
+              src="<%= require('./assets/images/home-insurance.png.png') %>"
+              alt="Home insurance"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="<%= require('./assets/images/pistachio-madness.png.png') %>"
+              alt="Pistachio madness"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img src="<%= require('./assets/images/reels.png') %>" alt="Reels" />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="<%= require('./assets/images/home-insurance.png.png') %>"
+              alt="Home insurance again"
+            />
+          </div>
         </div>
+      </div>
+      <div id="view-more-button" class="mx-[15px] pb-[104.5px] mt-[26.5px]"></div>
+    </section>
 
-    </div>
-    
+    <section id="team" class="pt-[66px] mx-[15px] pb-[120px]">
+      <div
+        class="relative flex justify-center border-dashed border rounded-[40px] border-[#95BBD7] p-[45px] mx-[40px] mb-9"
+      >
+        <img
+          class="z-10"
+          src="<%= require('./assets/images/phone-message.png.png') %>"
+          alt="Phone message"
+        />
+        <img
+          class="team-image -bottom-[35px] left-[34.36px]"
+          src="<%= require('./assets/images/heart-white-chat.png.png') %>"
+          alt="White heart chat"
+        />
+        <img
+          class="team-image -right-[14px] bottom-[92.18px]"
+          src="<%= require('./assets/images/instagram.png.png') %>"
+          alt="Instagram icon"
+        />
+        <img
+          class="team-image left-[27.69px] bottom-[92.46px]"
+          src="<%= require('./assets/images/facebook.png.png') %>"
+          alt="Facebook icon"
+        />
+        <img
+          class="team-image -left-[13.11px] top-[39.9px]"
+          src="<%= require('./assets/images/notification-message.png.png') %>"
+          alt="Notification message"
+        />
+        <img
+          class="team-image right-[56.59px] -top-[38px]"
+          src="<%= require('./assets/images/heart-red-chat.png.png') %>"
+          alt="Red heart chat"
+        />
+        <img
+          class="rotating-element absolute right-[26.89px] top-0 w-[67px] h-max z-0"
+          src="<%= require('./assets/images/team_shape01.png.png') %>"
+          alt="Shape"
+        />
+      </div>
+      <div class="pt-[60px] pb-[39.65px] mx-[15px] text-center">
+        <span class="span-sub-title">Worry-Free</span>
+        <h2 class="font-bold text-[32px] pt-[15px] leading-[38.4px]">
+          Risking Your Reputation and Losing Sales?
+        </h2>
+        <p class="paragraph-text mt-[23.17px] text-[#727272]">
+          Our 24/7 Inbox Management is your answer to keep up with messages and not miss out on
+          potential leads.
+        </p>
+        <p class="paragraph-text mt-[16.92px] text-[#727272]">
+          By offering <u class="text-[#191919]">quick replies</u> to your audience you will elevate
+          your <u class="text-[#191919]">brands image</u> and help you
+          <u class="text-[#191919]">get the sale</u>
+        </p>
+      </div>
+    </section>
+
+    <section id="success" class="mx-[15px]">
+      <img class="" src="<%= require('./assets/images/success_img.png.png') %>" alt="Success" />
+      <div class="pt-[50px]">
+        <span class="span-sub-title">Thinking "Outside the box"</span>
+        <h2 class="m-0 font-bold text-[35px] leading-[42px] pt-[15px] ">
+          Troubles Growing Your Audience?
+        </h2>
+        <p class="mt-[29px] paragraph-text text-[#727272]">
+          <u class="text-[#191919]">Attract new followers</u> that are relevant to your objectives by reaching <u class="text-[#191919]">
+            outside your social
+            media
+          </u> bubble, and you'll start to see a <u class="text-[#191919]">quicker return on your investment</u>.
+        </p>
+        <p class="my-[35px] paragraph-text text-[#727272]">
+          Along with <u class="text-[#191919]">captivating visuals</u>, our teams perform countless <u class="text-[#191919]">hours of research and planning</u>
+          to deliver <u class="text-[#191919]">optimized marketing campaigns</u> that target your <u class="text-[#191919]">ideal audience</u> who are most
+          likely to <u class="text-[#191919]">convert into leads</u>.
+        </p>
+        <p class="paragraph-text text-[#727272] mt-[35px] mb-[36px]">
+          By thoroughly planning your paid <u class="text-[#191919]">Social Media Advertising</u> campaign, we are able to ensure
+          that every penny of your <u class="text-[#191919]">marketing budget is well spent</u>.
+        </p>
+      </div>
     </section>
 
     <div id="root"></div>

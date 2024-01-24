@@ -55,4 +55,21 @@ const swiper = new Swiper('.swiper-container', {
         delay: 5000,
         disableOnInteraction: false,
       },
+      slidesPerView: 'auto',
+      centeredSlides: false,
+      spaceBetween: 24, 
   });
+
+
+  const viewMoreButton = Button('View More');
+
+document.getElementById('view-more-button').appendChild(viewMoreButton);
+
+
+const startReplyingButton = Button('Start Replying Faster');
+
+document.getElementById('team').appendChild(startReplyingButton);
+
+const successButton = Button('Start Driving Sales');
+
+document.getElementById('success').appendChild(successButton);

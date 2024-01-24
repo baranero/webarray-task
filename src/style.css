@@ -157,14 +157,25 @@ html {
   }
 
   .swiper-container {
-    width: 100%;
-    height: 300px; /* Można dostosować do potrzeb */
+    max-width: 100%;
     overflow: hidden; /* Zapobiega wyświetlaniu się treści poza kontenerem */
 }
 
+
 .swiper-slide {
-  width: 100%; /* Każdy slajd powinien zajmować pełną szerokość kontenera */
-  height: 100%; /* Można dostosować do wysokości kontenera */
-  /* Dodatkowe style jak potrzebne */
+  width: 300px; /* 80% szerokości kontenera, co pozwala na pokazanie 20% następnego slajdu */
+  /* Dodatkowe style dla slajdu */
+}
+
+.team-image {
+  position: absolute;
+  z-index: 20;
+}
+
+.span-sub-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30.6px;
+  color: #F89E52;
 }
 
