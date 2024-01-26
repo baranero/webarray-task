@@ -15,10 +15,11 @@
     />
   </head>
   <body>
-    <header class="header">
-      <img class="" src="<%= require('./assets/images/logo.png') %>" alt="Logo" />
+    <!-- Header -->
+    <header class="header container py-5">
+      <img src="<%= require('./assets/images/logo.png') %>" alt="Logo" />
       <img
-        class="h-[31px] mobile-nav-toggler"
+        class="h-[31px]"
         src="<%= require('./assets/images/mobile-nav-toggler.png') %>"
         alt="Mobile Nav Toggler"
         onclick="toggleMobileMenu()"
@@ -26,8 +27,8 @@
 
       <!-- Mobile Menu -->
       <div id="mobileMenu" class="mobile-menu hidden">
-        <nav class="flex flex-col h-screen text-base font-medium text-[#0B0B0B]">
-          <div class="flex justify-between py-[30px] px-[25px]">
+        <nav class="mobile-menu-nav">
+          <div class="mobile-menu-nav-container py-[30px] px-[25px]">
             <img class="w-[126px]" src="<%= require('./assets/images/logo.png') %>" alt="Logo" />
             <img
               class="h-5 mt-[3px]"
@@ -36,28 +37,29 @@
               onclick="toggleMobileMenu()"
             />
           </div>
-          <a class="mobile-menu-link" href="#management">Management</a>
-          <a class="mobile-menu-link" href="#marketing">Marketing</a>
-          <a class="mobile-menu-link" href="#increase-sales">Increase Sales</a>
-          <a class="mobile-menu-link" href="services">Services</a>
-          <a class="mobile-menu-link border-b" href="plans-and-pricing">Plans & Pricing</a>
+          <a class="mobile-menu-nav__link" href="#management">Management</a>
+          <a class="mobile-menu-nav__link" href="#marketing">Marketing</a>
+          <a class="mobile-menu-nav__link" href="#increase-sales">Increase Sales</a>
+          <a class="mobile-menu-nav__link" href="services">Services</a>
+          <a class="mobile-menu-nav__link border-b" href="plans-and-pricing">Plans & Pricing</a>
         </nav>
       </div>
     </header>
 
-    <section class="banner">
+    <!-- Banner section -->
+    <section class="banner pt-7 container">
       <img
         class="absolute z-10 left-2 bottom-[76px]"
         src="<%= require('./assets/images/banner_shape05.png') %>"
         alt="Banner shape"
       />
-      <div class="text-center banner-content">
-        <button class="banner-content__button">Social Media Marketing That Works</button>
-        <h2 class="banner-content__heading mt-5">Save Time</h2>
-        <h2 class="banner-content__heading my-4">Build Connections</h2>
-        <h2 class="banner-content__heading mb-8">Increase Profits</h2>
+      <div>
+        <button class="banner__button">Social Media Marketing That Works</button>
+        <h2 class="mt-5">Save Time</h2>
+        <h2 class="my-4">Build Connections</h2>
+        <h2 class="mb-8">Increase Profits</h2>
       </div>
-      <div class="grid grid-cols-2 grid-rows-2 mx-[15px]">
+      <div class="grid grid-cols-2 grid-rows-2">
         <img
           class="w-full pr-2 pb-1"
           src="<%= require('./assets/images/banner-image-1.png') %>"
@@ -136,7 +138,7 @@
       </div>
     </div>
 
-    <section class="bg-[#292F3E] px-[15px] pt-[144.78px]">
+    <section class="bg-[#292F3E] container pt-[144.78px]">
       <div class="flex flex-col items-center justify-center py-7">
         <div class="stat-card">
           <span class="stat-number text-[#F76766]">252</span>
@@ -184,9 +186,9 @@
       <div id="stats-section" class="mt-[50px] text-center">
         <div class="text-white h2-title">
           <sup class="text-[#FFD437] sup-title"> Social Media Management is </sup>
-          <h2>Building<br />Brands</h2>
-          <h2>Creating Connections</h2>
-          <h2>Driving Sales</h2>
+          <h2 class="stats-section__heading">Building<br />Brands</h2>
+          <h2 class="stats-section__heading">Creating Connections</h2>
+          <h2 class="stats-section__heading">Driving Sales</h2>
         </div>
         <div class="paragraph-text text-[#BBBBBB] mt-7 mb-[15.54px]">
           <p class="mb-[15px]">
@@ -308,9 +310,9 @@
       </div>
     </section>
 
-    <section id="success" class="mx-[15px]">
+    <section id="success" class="container">
       <img class="" src="<%= require('./assets/images/success_img.png.png') %>" alt="Success" />
-      <div class="pt-[50px]">
+      <div class="pt-[50px] text-left">
         <span class="span-sub-title">Thinking "Outside the box"</span>
         <h2 class="m-0 font-bold text-[35px] leading-[42px] pt-[15px]">
           Troubles Growing Your Audience?
@@ -335,7 +337,7 @@
       </div>
     </section>
 
-    <section id="social-trolls" class="mx-[15px] pb-[69.53px]">
+    <section id="social-trolls" class="container pb-[69.53px]">
       <img
         class=""
         src="<%= require('./assets/images/social-trolls.png.png') %>"
@@ -362,78 +364,104 @@
       </div>
     </section>
 
-    <section class="bg-[#292F3E] pt-[120px] text-center pb-[200px]">
-      <div class=" px-[15px]">
+    <section id="visually-impressive" class="bg-[#292F3E] pt-[120px] pb-[35px] text-center">
+      <div class="container">
         <span class="span-sub-title">Visually Impressive</span>
-        <h2 class="m-0 font-bold text-[35px] leading-[42px] pt-[15px] pb-[70px] text-white">We Can't Wait To Redefine Your
-          Brand</h2>
+        <h2 class="m-0 font-bold text-[35px] leading-[42px] pt-[15px] pb-[70px] text-white">
+          We Can't Wait To Redefine Your Brand
+        </h2>
       </div>
 
-        <div class="swiper-container swiper-container-with-navigation ">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img
-                src="<%= require('./assets/images/image 4.png') %>"
-                alt="1"
-              />
-              <img
-              src="<%= require('./assets/images/SMM Meme - IG 3.png') %>"
-              alt="5"
-            />
-            </div>
+      <div class="swiper-container swiper-container-with-navigation">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="<%= require('./assets/images/image 4.png') %>" alt="1" />
+            <img src="<%= require('./assets/images/SMM Meme - IG 3.png') %>" alt="5" />
+          </div>
 
-            <div class="swiper-slide">
+          <div class="swiper-slide">
+            <img src="<%= require('./assets/images/SMM Meme - IG 2.png') %>" alt="2" />
+            <img src="<%= require('./assets/images/image 3.png') %>" alt="6" />
+          </div>
+          <div class="swiper-slide">
+            <img src="<%= require('./assets/images/image 5.png') %>" alt="3" />
+            <img src="<%= require('./assets/images/pistachio-madness.png.png') %>" alt="7" />
+          </div>
+          <div class="swiper-slide">
+            <img src="<%= require('./assets/images/SMM Meme - IG 4.png') %>" alt="4" />
+            <img src="<%= require('./assets/images/image 7.png') %>" alt="8" />
+          </div>
+        </div>
+        <div class="pt-[23px] pb-[24px] relative flex items-start justify-center">
+          <h2 class="font-bold text-2xl leading-[33px] text-white text-center">
+            What Are You Waiting For?
+          </h2>
+          <div class="relative w-max justify-center hidden">
+            <div class="swiper-button-prev block swiper-button -left-[10px]">
               <img
-                src="<%= require('./assets/images/SMM Meme - IG 2.png') %>"
-                alt="2"
+                class=""
+                src="<%= require('./assets/images/chevron-down.png') %>"
+                alt="Chevron left"
               />
-              <img src="<%= require('./assets/images/image 3.png') %>" alt="6" />
             </div>
-            <div class="swiper-slide">
-              <img
-                src="<%= require('./assets/images/image 5.png') %>"
-                alt="3"
-              />
-              <img
-              src="<%= require('./assets/images/pistachio-madness.png.png') %>"
-              alt="7"
-            />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="<%= require('./assets/images/SMM Meme - IG 4.png') %>"
-                alt="4"
-              />
-              <img
-              src="<%= require('./assets/images/image 7.png') %>"
-              alt="8"
-            />
-            </div>
-            
-
-
-            
-
-          </div> 
-          <div class="pt-[70px] pb-[55.36px] relative flex items-start justify-between">
-            <h2 class="font-bold text-2xl leading-[33px] text-white text-left w-1/2">What Are You
-              Waiting For?</h2>
-            <div class="relative w-max flex justify-center">
-              <div class="swiper-button-prev block swiper-button -left-[10px] ">
-                <img class=""
-              src="<%= require('./assets/images/chevron-down.png') %>"
-              alt="Chevron left"
-            />
-              </div>
-              <div class="swiper-button-next block swiper-button right-0">
-                <img
-                src="<%= require('./assets/images/chevron-up.png') %>"
-                alt="Chevron right"
-              />
-              </div>
+            <div class="swiper-button-next block swiper-button right-0">
+              <img src="<%= require('./assets/images/chevron-up.png') %>" alt="Chevron right" />
             </div>
           </div>
         </div>
+      </div>
+      <div id="visually-impressive__button" class="container"></div>
+    </section>
+
+    <section id="company" class="pt-[86.84px] pb-[80.83px] container">
+      <img
+        class="absolute left-0 z-0"
+        src="<%= require('./assets/images/company_shape.png.png') %>"
+        alt="Company shape"
+      />
+      <div class="pt-[80.64px] pb-[64.56px] z-10">
+        <span class="span-sub-title">Our Company</span>
+        <h2 class="font-bold text-[32px] pt-[15px] leading-[38.4px]">
+          We Create Creative Designs For Every Web Page
+        </h2>
+        <p class="text-[#666666] leading-[27.2px]">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+          been the industry's standard.
+        </p>
+      </div>
+      <div>
+        <div class="h-full relative pb-[70px]">
+          <img src="<%= require('./assets/images/company_img01.png.png') %>" alt="Company image" />
+          <img
+            class="absolute -right-[15px] bottom-0"
+            src="<%= require('./assets/images/company_img02.png.png') %>"
+            alt="Company image"
+          />
+        </div>
+        <div class="pt-[50px]">
+          <h2 class="text-[50px] leading-[60px] h2-gradient">All Your Questions Are Here</h2>
+          <ul class="company-list text-left pb-[59.3px]">
+            <li>Seo quotes to inspire your campaign</li>
+            <li>Much easier to double your business</li>
+            <li>Free page speed insights tool to find out exactly</li>
+            <li>Seo quotes to inspire your campaign</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container text-center">
+      <img class="mx-auto pb-[50px]" src="<%= require('./assets/images/bakery 2.png') %>" alt="Bakery" />
+      <span class="span-sub-title ">What We Do</span>
+      <h2 class="font-bold text-[35px] pt-[15px] leading-[42px] pb-[20.6px]">
+        We design and develop web and mobile applications for our clients worldwide
+      </h2>
+      <p class="text-[#666666] leading-[27.2px]">
+        Lorem ipsum dolor sit amet, sed nulla ante
+        amet, elementum tincidunt arcu sed laoreet,
+        natoque ac eget imperdiet. Ac scelerisque
+        nibh dolores consectetuer,
+      </p>
     </section>
 
     <div id="root"></div>

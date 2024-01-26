@@ -106,3 +106,8 @@ cardsData.forEach((card) => {
 
 const protectBrandButton = Button("Protect Your Brand");
 document.getElementById("social-trolls").appendChild(protectBrandButton);
+
+document.getElementById("visually-impressive__button").appendChild(protectBrandButton);
+
+const discoverMoreButton = Button("Discover More");
+document.getElementById("company").appendChild(discoverMoreButton);

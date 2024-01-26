@@ -5,7 +5,19 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    container: {
+      center: true,
+      padding: '15px', // to zastosuje 15px padding na osi X dla wszystkich kontenerów
+    },
+    extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        sora: [`var(--font-sora)`, 'sans-serif'],
+      },
+      boxShadow: {
+        'header': '0 10px 15px 0 rgba(25, 25, 25, 0.1)',
+      }
+    },
   },
   variants: {
   extend: {},
