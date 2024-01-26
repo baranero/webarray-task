@@ -1,170 +1,215 @@
+/* Tailwind CSS framework import */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'swiper/swiper-bundle.css';
 
-
-html {
-    font-family: 'Poppins', sans-serif;
-}
+/* Swiper CSS import */
+@import "swiper/swiper-bundle.css";
 
 .header {
-    box-shadow: 0 10px 15px 0 #1919191a;
+  @apply flex z-30 justify-between fixed w-full items-center py-5 px-4 bg-white;
 }
 
-/* Styl dla menu mobilnego */
+.banner {
+  @apply relative pt-7;
+}
+
+/* Base styles */
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header styles */
+.header {
+  box-shadow: 0 10px 15px 0 rgba(25, 25, 25, 0.1);
+}
+
+/* Mobile menu styles */
 .mobile-menu {
-    display: block; /* Zmiana na block, aby umożliwić animację */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    z-index: 1000;
-    transform: translateX(100%); /* Ukrywa menu poza ekranem */
-    transition: transform 0.3s ease; /* Animacja wsunięcia */
-  }
-  
-  
-  /* Styl, aby pokazać menu */
-  .mobile-menu.show {
-    transform: translateX(0); /* Przesuwa menu do widocznej pozycji */
-  }
+  display: block; /* Set to block to enable animation */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  transform: translateX(100%); /* Hide menu off-screen */
+  transition: transform 0.3s ease; /* Slide-in animation */
+}
 
-  .mobile-menu-link {
-    padding: 10px 0 10px 25px;
-    border-top: 1px solid rgba(0, 0, 0, 0.10);
-  }
-  
-  /* Dalsze style dla linków, animacji itp. */
-  
+/* Style to display the menu */
+.mobile-menu.show {
+  transform: translateX(0); /* Move menu to visible position */
+}
 
+.mobile-menu-link {
+  padding: 10px 0 10px 25px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Banner styles */
 .banner-content__heading {
-    font-size: 35.2px;
-    line-height: 38.7px;
-
-    font-weight: bold;
+  font-size: 35.2px;
+  line-height: 38.7px;
+  font-weight: bold;
 }
 
 .banner-content__button {
-    background-color: #F79D5A;
-
-    border: none;
-    border-radius: 32px;
-    color: #FFF1E7;
-    font-size: 18px;
-    line-height: 21.6px;
-    margin-top: 90px;
-    padding: 23px 21px 22.19px;
+  background-color: #f79d5a;
+  border: none;
+  border-radius: 32px;
+  color: #fff1e7;
+  font-size: 18px;
+  line-height: 21.6px;
+  margin-top: 90px;
+  padding: 23px 21px 22.19px;
 }
 
 .banner-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px; /* Adjust as necessary for spacing */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px; /* Adjust spacing as necessary */
 }
 
+/* Logo carousel styles */
 .logo-carousel {
-    overflow: hidden;
-    box-shadow: 0 44px 64px 0 rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  box-shadow: 0 44px 64px 0 rgba(0, 0, 0, 0.15);
 }
 
 .logo-images {
-    display: flex;
-    align-items: center;
-    animation: scroll 10s linear infinite;
+  display: flex;
+  align-items: center;
+  animation: scroll 10s linear infinite;
 }
 
 .logo-images img {
-    margin-right: 44px; /* Odstęp między logo */
+  margin-right: 44px; /* Spacing between logos */
 }
 
+/* Keyframes for logo scrolling animation */
 @keyframes scroll {
-    0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
+  0% {
+    transform: translateX(0);
   }
-
-.stat-card {
-    background-color: #fff;
-    border-color: #F3F3F3;
-    border-radius: 10px;
-
-    margin: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-width: 220px;
-    min-height: 220px;
-    position: relative;
+  100% {
+    transform: translateX(-50%);
   }
-  
-  .stat-number {
-    font-size: 44px;
-    font-weight: bold;
-    z-index: 10;
-  }
-  
-  .stat-text {
-    color: #6B645D;
-    font-size: large;
-    z-index: 10;
-  }
-  
-  .stat-card img {
-    position: absolute;
-    bottom: 0;
-  }
-  
-  @keyframes rotateAnimation {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(10deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-  
-  .rotating-element {
-    animation: rotateAnimation 2s ease-in-out infinite;
-  }
-  
-  .sup-title {
-    font-size: 16px;
-    line-height: 34px;
-    margin-bottom: 20px;
-    font-weight: 500;
-  }
-
-  .h2-title {
-    font-size: 45.7px;
-    line-height: 54.8px;
-    font-weight: 700;
-  }
-
-  .paragraph-text {
-    font-size: 19.2px;
-    line-height: 32.6px;
-    font-weight: 300;
-  }
-
-  .swiper-container {
-    max-width: 100%;
-    overflow: hidden; /* Zapobiega wyświetlaniu się treści poza kontenerem */
 }
 
+/* Stat card styles */
+.stat-card {
+  background-color: #fff;
+  border-color: #f3f3f3;
+  border-radius: 10px;
+  margin: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 220px;
+  min-height: 220px;
+  position: relative;
+}
+
+.stat-number {
+  font-size: 44px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.stat-text {
+  color: #6b645d;
+  font-size: large;
+  z-index: 10;
+}
+
+.stat-card img {
+  position: absolute;
+  bottom: 0;
+}
+
+/* Keyframes for rotation animation */
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.rotating-element {
+  animation: rotateAnimation 2s ease-in-out infinite;
+}
+
+/* Additional text styles */
+.sup-title {
+  font-size: 16px;
+  line-height: 34px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.h2-title {
+  font-size: 45.7px;
+  line-height: 54.8px;
+  font-weight: 700;
+}
+
+.paragraph-text {
+  font-size: 19.2px;
+  line-height: 32.6px;
+  font-weight: 300;
+}
+
+/* Swiper container styles */
+.swiper-container {
+  width: 100%;
+  overflow: hidden; /* Prevent content from spilling outside the container */
+}
+
+.swiper-container-with-navigation {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 .swiper-slide {
-  width: 300px; /* 80% szerokości kontenera, co pozwala na pokazanie 20% następnego slajdu */
-  /* Dodatkowe style dla slajdu */
+  width: 300px;
+}
+
+.swiper-slide img + img {
+  margin-top: 29px;
+}
+
+.swiper-button {
+  width: 32px;
+  height: 32px;
+  background: #ebebeb80;
+  border-radius: 16px;
+  color: #2D2D48;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.swiper-button::after {
+display: none;
+}
+
+.swiper-slide img {
+  vertical-align: top; /* Wyrównuje zdjęcie do górnej krawędzi */
+  width: 100%; /* Opcjonalnie, aby zdjęcie wypełniło całą szerokość slajdu */
+  height: auto; /* Opcjonalnie, aby zachować proporcje zdjęcia */
+  margin: 0; /* Usuwa wszelkie marginesy */
+  padding: 0; /* Usuwa wszelkie paddingi */
 }
 
 .team-image {
@@ -176,6 +221,5 @@ html {
   font-size: 18px;
   font-weight: 500;
   line-height: 30.6px;
-  color: #F89E52;
+  color: #f89e52;
 }
-

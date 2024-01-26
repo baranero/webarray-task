@@ -15,9 +15,7 @@
     />
   </head>
   <body>
-    <header
-      class="flex z-30 justify-between fixed w-full items-center py-5 px-[15px] header bg-white"
-    >
+    <header class="header">
       <img class="" src="<%= require('./assets/images/logo.png') %>" alt="Logo" />
       <img
         class="h-[31px] mobile-nav-toggler"
@@ -47,7 +45,7 @@
       </div>
     </header>
 
-    <section class="banner relative pt-7">
+    <section class="banner">
       <img
         class="absolute z-10 left-2 bottom-[76px]"
         src="<%= require('./assets/images/banner_shape05.png') %>"
@@ -218,14 +216,14 @@
       <div class="text-center mx-[15px]">
         <sup class="text-[#FF7012] sup-title">Our Expertise is Your Success</sup>
         <h2 class="h2-title">Struggling to Make Engaging Content?</h2>
-        <p class="paragraph-text mt-[26.19px] text-[#727272]">
+        <p class="paragraph-text mb-9 mt-[26.19px] text-[#727272]">
           From the research and planning to creating striking images and videos for your posts, our
           service focuses on creating a <u class="text-[#191919]">unique voice</u> for your brand
           that will <u class="text-[#191919]">engage your audience</u>
           and keep them coming back for more!
         </p>
       </div>
-      <div class="swiper-container ml-[15px]">
+      <div class="swiper-container swiper-container-without-navigation pl-[15px]">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img
@@ -314,25 +312,128 @@
       <img class="" src="<%= require('./assets/images/success_img.png.png') %>" alt="Success" />
       <div class="pt-[50px]">
         <span class="span-sub-title">Thinking "Outside the box"</span>
-        <h2 class="m-0 font-bold text-[35px] leading-[42px] pt-[15px] ">
+        <h2 class="m-0 font-bold text-[35px] leading-[42px] pt-[15px]">
           Troubles Growing Your Audience?
         </h2>
         <p class="mt-[29px] paragraph-text text-[#727272]">
-          <u class="text-[#191919]">Attract new followers</u> that are relevant to your objectives by reaching <u class="text-[#191919]">
-            outside your social
-            media
-          </u> bubble, and you'll start to see a <u class="text-[#191919]">quicker return on your investment</u>.
+          <u class="text-[#191919]">Attract new followers</u> that are relevant to your objectives
+          by reaching <u class="text-[#191919]"> outside your social media </u> bubble, and you'll
+          start to see a <u class="text-[#191919]">quicker return on your investment</u>.
         </p>
         <p class="my-[35px] paragraph-text text-[#727272]">
-          Along with <u class="text-[#191919]">captivating visuals</u>, our teams perform countless <u class="text-[#191919]">hours of research and planning</u>
-          to deliver <u class="text-[#191919]">optimized marketing campaigns</u> that target your <u class="text-[#191919]">ideal audience</u> who are most
-          likely to <u class="text-[#191919]">convert into leads</u>.
+          Along with <u class="text-[#191919]">captivating visuals</u>, our teams perform countless
+          <u class="text-[#191919]">hours of research and planning</u> to deliver
+          <u class="text-[#191919]">optimized marketing campaigns</u> that target your
+          <u class="text-[#191919]">ideal audience</u> who are most likely to
+          <u class="text-[#191919]">convert into leads</u>.
         </p>
         <p class="paragraph-text text-[#727272] mt-[35px] mb-[36px]">
-          By thoroughly planning your paid <u class="text-[#191919]">Social Media Advertising</u> campaign, we are able to ensure
+          By thoroughly planning your paid
+          <u class="text-[#191919]">Social Media Advertising</u> campaign, we are able to ensure
           that every penny of your <u class="text-[#191919]">marketing budget is well spent</u>.
         </p>
       </div>
+    </section>
+
+    <section id="social-trolls" class="mx-[15px] pb-[69.53px]">
+      <img
+        class=""
+        src="<%= require('./assets/images/social-trolls.png.png') %>"
+        alt="Social Trolls"
+      />
+      <div class="pt-[50px] pb-[39.65px] text-center">
+        <span class="span-sub-title">Keeping You Covered</span>
+        <h2 class="font-bold text-[32px] pt-[15px] leading-[38.4px]">
+          Social Gossiping Slowing You Down?
+        </h2>
+        <p class="paragraph-text mt-[29.6px] text-[#727272]">
+          Staying on top of how your brand is being used is an important aspect to
+          <u class="text-[#191919]">protect your identity and reputation</u>.
+        </p>
+        <p class="paragraph-text mt-[16.92px] text-[#727272]">
+          Our sophisticated <u class="text-[#191919]">threat monitoring</u> system enables us to
+          <u class="text-[#191919]">quickly identify threats</u> towards your brand and deal with
+          them to <u class="text-[#191919]">prevent damage</u> to your reputation.
+        </p>
+        <p class="paragraph-text mt-[15px] mb-[16.39px] text-[#727272]">
+          The most common threats we encounter:
+        </p>
+        <div id="social-trolls-threats" class="flex flex-wrap justify-center"></div>
+      </div>
+    </section>
+
+    <section class="bg-[#292F3E] pt-[120px] text-center pb-[200px]">
+      <div class=" px-[15px]">
+        <span class="span-sub-title">Visually Impressive</span>
+        <h2 class="m-0 font-bold text-[35px] leading-[42px] pt-[15px] pb-[70px] text-white">We Can't Wait To Redefine Your
+          Brand</h2>
+      </div>
+
+        <div class="swiper-container swiper-container-with-navigation ">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="<%= require('./assets/images/image 4.png') %>"
+                alt="1"
+              />
+              <img
+              src="<%= require('./assets/images/SMM Meme - IG 3.png') %>"
+              alt="5"
+            />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="<%= require('./assets/images/SMM Meme - IG 2.png') %>"
+                alt="2"
+              />
+              <img src="<%= require('./assets/images/image 3.png') %>" alt="6" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="<%= require('./assets/images/image 5.png') %>"
+                alt="3"
+              />
+              <img
+              src="<%= require('./assets/images/pistachio-madness.png.png') %>"
+              alt="7"
+            />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="<%= require('./assets/images/SMM Meme - IG 4.png') %>"
+                alt="4"
+              />
+              <img
+              src="<%= require('./assets/images/image 7.png') %>"
+              alt="8"
+            />
+            </div>
+            
+
+
+            
+
+          </div> 
+          <div class="pt-[70px] pb-[55.36px] relative flex items-start justify-between">
+            <h2 class="font-bold text-2xl leading-[33px] text-white text-left w-1/2">What Are You
+              Waiting For?</h2>
+            <div class="relative w-max flex justify-center">
+              <div class="swiper-button-prev block swiper-button -left-[10px] ">
+                <img class=""
+              src="<%= require('./assets/images/chevron-down.png') %>"
+              alt="Chevron left"
+            />
+              </div>
+              <div class="swiper-button-next block swiper-button right-0">
+                <img
+                src="<%= require('./assets/images/chevron-up.png') %>"
+                alt="Chevron right"
+              />
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
 
     <div id="root"></div>
