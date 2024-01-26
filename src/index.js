@@ -123,3 +123,21 @@ document.getElementById("company").appendChild(discoverMoreButton);
 
 const consultationButton = Button("Consultation");
 document.getElementById("form").appendChild(consultationButton);
+
+document.querySelectorAll('.accordion-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const accordionContent = button.nextElementSibling;
+
+    if (button.classList.contains('active')) {
+      button.classList.remove('active');
+      accordionContent.style.maxHeight = 0;
+    } else {
+      document.querySelectorAll('.accordion-button').forEach(otherButton => {
+        otherButton.classList.remove('active');
+        otherButton.nextElementSibling.style.maxHeight = 0;
+      });
+      button.classList.add('active');
+      accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+    }
+  });
+});
