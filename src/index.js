@@ -3,7 +3,7 @@ import "./style.css";
 import Button from "./components/button";
 import ScrollReveal from "scrollreveal";
 import Swiper from "swiper";
-import { Autoplay, Navigation, Grid } from "swiper/modules";
+import { Autoplay, Navigation, Grid, Pagination } from "swiper/modules";
 import createThreadCard from "./components/threats-card";
 
 // Function to toggle mobile menu visibility
@@ -75,6 +75,15 @@ const swiperWithNavigation = new Swiper(".swiper-container-with-navigation", {
   },
 });
 
+const swiperWithPagination = new Swiper(".swiper-container-with-pagination", {
+  modules: [Pagination],
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+});
+
 const viewMoreButton = Button("View More");
 document.getElementById("view-more-button").appendChild(viewMoreButton);
 
@@ -111,3 +120,6 @@ document.getElementById("visually-impressive__button").appendChild(protectBrandB
 
 const discoverMoreButton = Button("Discover More");
 document.getElementById("company").appendChild(discoverMoreButton);
+
+const consultationButton = Button("Consultation");
+document.getElementById("form").appendChild(consultationButton);

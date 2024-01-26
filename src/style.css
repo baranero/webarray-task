@@ -15,11 +15,11 @@
     @apply text-[35.2px] leading-[38.7px] font-bold;
   }
 
-  div {
+  div,
+  section {
     @apply text-center;
   }
 }
-
 
 .header {
   display: flex;
@@ -31,8 +31,6 @@
   background: #fff;
   box-shadow: 0 10px 15px 0 rgba(25, 25, 25, 0.1);
 }
-
-
 
 .banner {
   position: relative;
@@ -58,7 +56,7 @@
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 500;
-  color: #0B0B0B;
+  color: #0b0b0b;
   text-align: left;
 }
 
@@ -252,19 +250,18 @@
 }
 
 .h2-gradient {
-  background: #121FCF;
-  background: linear-gradient(to right, #6071D9 40%, #AA676F 66%, #CCB41A 100%);
+  background: #121fcf;
+  background: linear-gradient(to right, #6071d9 40%, #aa676f 66%, #ccb41a 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  
 }
 
 .company-list li {
   list-style-type: none;
-  position: relative; 
+  position: relative;
   padding-left: 39px;
-  color: #959EB6;
+  color: #959eb6;
   font-size: 18px;
   line-height: 25.2px;
 }
@@ -274,12 +271,108 @@
 }
 
 .company-list li::before {
-  content: ''; /* Pusty content, ponieważ używamy tła */
+  content: ""; /* Pusty content, ponieważ używamy tła */
   position: absolute; /* Pozycjonuje pseudoelement absolutnie */
   left: 0; /* Pozycjonuje znacznik na początku elementu li */
   top: 0; /* Ajustowanie pozycji znacznika */
   width: 24px; /* Szerokość obrazu znacznika */
   height: 24px; /* Wysokość obrazu znacznika */
-  background-image: url('./assets/images/check_icon.png.png'); /* Ścieżka do obrazu */
+  background-image: url("./assets/images/check_icon.png.png"); /* Ścieżka do obrazu */
   background-size: cover; /* Aby obraz pokrywał cały pseudoelement */
+}
+
+.bakery-section {
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(244,250,255,1) 100%);
+}
+
+input, select {
+  padding: 22.5px 29px;
+  border-radius: 13px;
+  background: #FBFDFF;
+  border: 1px solid #D5D5D5;
+  color: #0B0B0B;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+select {
+  padding-right: 71px;
+}
+
+/* Dodaj ten kod do twoich stylów (może być wewnątrz <style> w head lub w pliku CSS) */
+.custom-select {
+  position: relative;
+}
+.custom-select select {
+  -webkit-appearance: none; /* Usuwa domyślną strzałkę w Safari i Chrome */
+  -moz-appearance: none; /* Usuwa domyślną strzałkę w Firefox */
+  appearance: none; /* Usuwa domyślną strzałkę w nowoczesnych przeglądarkach */
+  padding-right: 30px; /* Odstęp dla strzałki od prawej krawędzi */
+}
+.custom-select svg {
+  height: 25px; /* Wysokość strzałki */
+  width: auto;
+  color: #676879; /* Odstęp strzałki od krawędzi kontenera */
+}
+
+
+input::placeholder, select::placeholder {
+  color: #0B0B0B;
+
+}
+
+.swiper-container-with-pagination {
+  position: relative;
+}
+
+.swiper-silde-pagination {
+ width: 100%;
+ padding-bottom: 40px;
+ border-radius: 20px;
+ position: relative;
+ z-index: 10;
+}
+.swiper-silde-pagination img {
+
+  border-radius: 20px;
+
+ }
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #D9D9D9;
+  background: #fff;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  width: 14px;
+  height: 14px;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px orange;
+  background-color: #f89e52;
+}
+
+.swiper-silde-pagination__content {
+  position: absolute;
+  padding: 24px 30px 20px;
+  bottom: 39px;
+  left: 0;
+  z-index: 20;
+  background: #fff;
+  border-top-right-radius: 20px;
+}
+
+.swiper-silde-pagination__content h2 {
+  font-size: 16px;
+  line-height: 19.2px;
+}
+
+.swiper-silde-pagination__content span {
+  font-size: 15px;
+  line-height: 25.5px;
+  color: #737373;
 }
