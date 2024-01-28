@@ -6,10 +6,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
-      sm: '390px',
-      md: '768px',
-      lg: '1440px',
-      xl: '1920px',
+      sm: '391px',
+      md: '769px',
+      lg: '1441px',
+      xl: '1921px',
     },
     extend: {
       fontFamily: {

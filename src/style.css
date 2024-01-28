@@ -26,13 +26,7 @@
 
 
 .header {
-  display: flex;
-  z-index: 30;
-  justify-content: space-between;
-
   width: 100%;
-  align-items: center;
-  background: #fff;
   box-shadow: 0 10px 15px 0 rgba(25, 25, 25, 0.1);
 }
 
