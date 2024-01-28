@@ -48,7 +48,7 @@ window.toggleMobileMenu = toggleMobileMenu;
 
 // Initializing components
 const viewPlansButton = Button("View Our Plans");
-document.getElementById("banner-container").appendChild(viewPlansButton);
+document.getElementById("banner-logo-section").appendChild(viewPlansButton);
 
 // Function to animate numerical values
 function animateValue(obj, start, end, duration) {

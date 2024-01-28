@@ -13,7 +13,17 @@ module.exports = {
     },
     extend: {
       spacing: {
-        '15px': '15px'
+        '15px': '15px',
+        '44px': '44px',
+      },
+      animation: {
+        carousel: 'carousel 15s linear infinite'
+      },
+      keyframes: {
+        carousel: {
+          '0%': {transform: 'translateX(0)'},
+          '100%': {transform: 'translateX(-272%)'},
+        }
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

@@ -24,6 +24,10 @@
     @apply shadow-[0_10px_15px_0_rgba(25,25,25,0.1)];
   }
 
+  .logo-carousel {
+    @apply shadow-[0_44px_64px_0_rgba(0,0,0,0.15)]
+  }
+
   .show {
     @apply translate-x-0;
   }
@@ -31,32 +35,6 @@
   .span-sub-title {
     @apply text-[18px] leading-[30.6px] text-orangeDark font-medium;
   }
-
-/* Logo carousel styles */
-.logo-carousel {
-  overflow: hidden;
-  box-shadow: 0 44px 64px 0 rgba(0, 0, 0, 0.15);
-}
-
-.logo-images {
-  display: flex;
-  align-items: center;
-  animation: scroll 10s linear infinite;
-}
-
-.logo-images img {
-  margin-right: 44px; /* Spacing between logos */
-}
-
-/* Keyframes for logo scrolling animation */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 
 /* Stat card styles */
 .stat-card {
