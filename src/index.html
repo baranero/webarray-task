@@ -15,655 +15,72 @@
     />
   </head>
   <body>
-    <!-- Header -->
-    <header class="header container py-5">
-      <img src="<%= require('./assets/images/logo.png') %>" alt="Logo" />
-      <img
-        class="h-[31px]"
-        src="<%= require('./assets/images/mobile-nav-toggler.png') %>"
-        alt="Mobile Nav Toggler"
-        onclick="toggleMobileMenu()"
-      />
-
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="mobile-menu hidden">
-        <nav class="mobile-menu-nav">
-          <div class="mobile-menu-nav-container py-[30px] px-[25px]">
-            <img class="w-[126px]" src="<%= require('./assets/images/logo.png') %>" alt="Logo" />
-            <img
-              class="h-5 mt-[3px]"
-              src="<%= require('./assets/images/close-icon.png') %>"
-              alt="Close button"
-              onclick="toggleMobileMenu()"
-            />
-          </div>
-          <a class="mobile-menu-nav__link" href="#management">Management</a>
-          <a class="mobile-menu-nav__link" href="#marketing">Marketing</a>
-          <a class="mobile-menu-nav__link" href="#increase-sales">Increase Sales</a>
-          <a class="mobile-menu-nav__link" href="services">Services</a>
-          <a class="mobile-menu-nav__link border-b" href="plans-and-pricing">Plans & Pricing</a>
-        </nav>
-      </div>
-    </header>
+    <!-- Header section -->
+    <header id="header-container" class="header md:px-6 px-[15px] py-5"></header>
 
     <!-- Banner section -->
-    <section class="banner relative pt-7 container">
-      <img
-        class="absolute z-10 left-2 bottom-[76px]"
-        src="<%= require('./assets/images/banner_shape05.png') %>"
-        alt="Banner shape"
-      />
-      <div>
-        <button class="banner__button">Social Media Marketing That Works</button>
-        <h2 class="mt-5 text-custom">Save Time</h2>
-        <h2 class="my-4 text-custom">Build Connections</h2>
-        <h2 class="mb-8 text-custom">Increase Profits</h2>
-      </div>
-      <div class="grid grid-cols-2 grid-rows-2">
-        <img
-          class="w-full pr-2 pb-1"
-          src="<%= require('./assets/images/banner-image-1.png') %>"
-          alt="Banner image"
-        />
-        <img
-          class="row-span-2 h-full"
-          src="<%= require('./assets/images/banner-image-3.png') %>"
-          alt="Banner image"
-        />
-        <img
-          class="w-full pr-2 pt-1"
-          src="<%= require('./assets/images/banner-image-2.png') %>"
-          alt="Banner image"
-        />
-      </div>
-      <div id="banner-section" class="mt-8">
-        <div class="flex justify-between mx-[34px] mb-10">
-          <img src="<%= require('./assets/images/linkedin-icon.png') %>" alt="Linkedin Icon" />
-          <img src="<%= require('./assets/images/facebook-icon.png') %>" alt="Facebook Icon" />
-          <img src="<%= require('./assets/images/instagram-icon.png') %>" alt="Instagram Icon" />
-          <img src="<%= require('./assets/images/twitter-icon.png') %>" alt="Twitter Icon" />
-          <img src="<%= require('./assets/images/google-icon.png') %>" alt="Google Icon" />
-          <img src="<%= require('./assets/images/youtube-icon.png') %>" alt="Youtube Icon" />
-        </div>
-      </div>
-    </section>
-    <!-- Brand area -->
+    <section id="banner-container" class="banner relative pt-7 px-[15px] md:px-6"></section>
+
+    <!-- Brand area section -->
     <div
-      id="brand-area-carousel"
-      class="bg-[#1D1D25] logo-carousel translate-y-[80.68px] flex mx-[15px] py-[62.5px] relative mt-[9.32px] rounded-[20px]"
-    >
-      <div class="h-[42px] flex justify-around">
-        <div class="logo-images">
-          <img
-            class="h-full w-full"
-            src="<%= require('./assets/images/entrepreneur-logo.png') %>"
-            alt="Entrepreneur Icon"
-          />
-          <img
-            class="h-full w-full"
-            src="<%= require('./assets/images/google-logo.png') %>"
-            alt="Google Icon"
-          />
-          <img
-            class="h-full w-full"
-            src="<%= require('./assets/images/facebook-marketing-partners-badge.png') %>"
-            alt="Facebook Icon"
-          />
-          <img
-            class="h-full w-full"
-            src="<%= require('./assets/images/meta-logo.png') %>"
-            alt="Meta Icon"
-          />
-          <img
-            class="h-full w-full"
-            src="<%= require('./assets/images/entrepreneur-logo.png') %>"
-            alt="Entrepreneur Icon"
-          />
-          <img
-            class="h-full w-full"
-            src="<%= require('./assets/images/google-logo.png') %>"
-            alt="Google Icon"
-          />
-          <img
-            class="h-full w-full"
-            src="<%= require('./assets/images/facebook-marketing-partners-badge.png') %>"
-            alt="Facebook Icon"
-          />
-          <img
-            class="h-full w-full"
-            src="<%= require('./assets/images/meta-logo.png') %>"
-            alt="Meta Icon"
-          />
-        </div>
-      </div>
-    </div>
+      id="brand-area-container"
+      class="bg-[#1D1D25] logo-carousel translate-y-[80.68px] flex mx-[15px] md:mx-[39px] py-[62.5px] relative mt-[9.32px] rounded-[20px]"
+    ></div>
 
-    <section class="bg-dark container pt-[144.78px]">
-      <div class="flex flex-col items-center justify-center py-7">
-        <div class="stat-card">
-          <span class="stat-number text-[#F76766]">252</span>
-          <p class="stat-text">Offices</p>
-          <img
-            class="left-0"
-            src="<%= require('./assets/images/office-icon.png') %>"
-            alt="Office Icon"
-          />
-        </div>
-        <div class="stat-card">
-          <span class="stat-number text-[#265FDB]">10</span>
-          <p class="stat-text">Workers</p>
-          <img
-            class="right-0"
-            src="<%= require('./assets/images/workers-icon.png') %>"
-            alt="Workers Icon"
-          />
-        </div>
-        <div class="stat-card">
-          <div class="z-20">
-            <span class="stat-number text-[#57C0CE]">15</span
-            ><span class="stat-number text-[#57C0CE]">K</span>
-          </div>
-          <p class="stat-text">Customers</p>
-          <img
-            class="left-0"
-            src="<%= require('./assets/images/customers-icon.png') %>"
-            alt="Customers Icon"
-          />
-        </div>
-        <div class="stat-card">
-          <div class="z-20">
-            <span class="stat-number text-[#A666F7]">1300</span
-            ><span class="stat-number text-[#A666F7]">+</span>
-          </div>
-          <p class="stat-text">Projects</p>
-          <img
-            class="left-0"
-            src="<%= require('./assets/images/projects-icon.png') %>"
-            alt="Projects Icon"
-          />
-        </div>
-      </div>
-      <div id="stats-section" class="mt-[50px] text-center">
-        <div class="text-white h2-title">
-          <sup class="text-[#FFD437] sup-title"> Social Media Management is </sup>
-          <h2 class="text-xxl">Building<br />Brands</h2>
-          <h2 class="text-xxl">Creating Connections</h2>
-          <h2 class="text-xxl">Driving Sales</h2>
-        </div>
-        <div class="paragraph-text text-[#BBBBBB] mt-7 mb-[15.54px]">
-          <p class="mb-[15px]">
-            Social Media is <em>more than just posting</em> and showing off how many followers you
-            have. It's a valuable addition to your marketing strategy that <u>builds trust</u> and
-            <u>creates connections</u> with potential customers to <u>drive sales</u> and
-            <u>increase your revenue.</u>
-          </p>
-          <p class="mb-[15px]">
-            Save your time and money by partnering with us and start seeing results that give you
-            the <u>highest return on investment.</u>
-          </p>
-          <p>After all; when you grow, we grow together.</p>
-        </div>
-      </div>
-      <p class="text-[#3486FA] text-center leading-[26.8px] pt-[24.85px] pb-[63.88px]">
-        How We Can Help
-      </p>
+    <!-- Stats section -->
+    <section id="stats-container" class="bg-dark px-[15px] pt-[144.78px]"></section>
+
+    <!-- Expertise section -->
+    <section id="expertise-container" class="mt-[29px]"></section>
+
+    <!-- Risk section -->
+    <section id="risk-container" class="pt-[66px] mx-[15px] pb-[120px]"></section>
+
+    <!-- Success section -->
+    <section id="success-container" class="px-[15px]"></section>
+
+    <!-- Social section -->
+    <section id="social-container" class="px-[15px] pb-[69.53px] relative"></section>
+
+    <!-- Visual section -->
+    <section id="visual-container" class="bg-dark pt-[120px] pb-[35px] text-center"></section>
+
+    <!-- Company section -->
+    <section id="company-container" class="pt-[86.84px] pb-[80.83px] px-[15px]"></section>
+
+    <!-- Bakery section -->
+    <section id="bakery-container" class="px-[15px] text-center bakery-section">
+      
     </section>
 
-    <section class="mt-[29px]">
-      <img
-        class="rotating-element ml-[34.36px]"
-        src="<%= require('./assets/images/project_shape01.png') %>"
-        alt="Shape"
-      />
-      <div class="text-center mx-[15px]">
-        <sup class="text-[#FF7012] sup-title">Our Expertise is Your Success</sup>
-        <h2 class="text-xxl">Struggling to Make Engaging Content?</h2>
-        <p class="paragraph-text mb-9 mt-[26.19px] text-paragraphFirst">
-          From the research and planning to creating striking images and videos for your posts, our
-          service focuses on creating a <u class="text-underline">unique voice</u> for your brand
-          that will <u class="text-underline">engage your audience</u>
-          and keep them coming back for more!
-        </p>
-      </div>
-      <div class="swiper-container swiper-container-without-navigation pl-[15px]">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img
-              src="<%= require('./assets/images/home-insurance.png.png') %>"
-              alt="Home insurance"
-            />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="<%= require('./assets/images/pistachio-madness.png.png') %>"
-              alt="Pistachio madness"
-            />
-          </div>
-          <div class="swiper-slide">
-            <img src="<%= require('./assets/images/reels.png') %>" alt="Reels" />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="<%= require('./assets/images/home-insurance.png.png') %>"
-              alt="Home insurance again"
-            />
-          </div>
-        </div>
-      </div>
-      <div id="view-more-button" class="mx-[15px] pb-[104.5px] mt-[26.5px]"></div>
+    <!-- Form section -->
+    <section id="form-container" class="pt-[139.59px] bg-[#F2FAFF] px-[15px]">
+      
     </section>
 
-    <section id="team" class="pt-[66px] mx-[15px] pb-[120px]">
-      <div
-        class="relative flex justify-center border-dashed border rounded-[40px] border-[#95BBD7] p-[45px] mx-[40px] mb-9"
-      >
-        <img
-          class="z-10"
-          src="<%= require('./assets/images/phone-message.png.png') %>"
-          alt="Phone message"
-        />
-        <img
-          class="team-image -bottom-[35px] left-[34.36px]"
-          src="<%= require('./assets/images/heart-white-chat.png.png') %>"
-          alt="White heart chat"
-        />
-        <img
-          class="team-image -right-[14px] bottom-[92.18px]"
-          src="<%= require('./assets/images/instagram.png.png') %>"
-          alt="Instagram icon"
-        />
-        <img
-          class="team-image left-[27.69px] bottom-[92.46px]"
-          src="<%= require('./assets/images/facebook.png.png') %>"
-          alt="Facebook icon"
-        />
-        <img
-          class="team-image -left-[13.11px] top-[39.9px]"
-          src="<%= require('./assets/images/notification-message.png.png') %>"
-          alt="Notification message"
-        />
-        <img
-          class="team-image right-[56.59px] -top-[38px]"
-          src="<%= require('./assets/images/heart-red-chat.png.png') %>"
-          alt="Red heart chat"
-        />
-        <img
-          class="rotating-element absolute right-[26.89px] top-0 w-[67px] h-max z-0"
-          src="<%= require('./assets/images/team_shape01.png.png') %>"
-          alt="Shape"
-        />
-      </div>
-      <div class="pt-[60px] pb-[39.65px] mx-[15px] text-center">
-        <span class="span-sub-title">Worry-Free</span>
-        <h2 class="font-bold text-lg pt-[15px]">Risking Your Reputation and Losing Sales?</h2>
-        <p class="paragraph-text mt-[23.17px] text-paragraphFirst">
-          Our 24/7 Inbox Management is your answer to keep up with messages and not miss out on
-          potential leads.
-        </p>
-        <p class="paragraph-text mt-[16.92px] text-paragraphFirst">
-          By offering <u class="text-underline">quick replies</u> to your audience you will elevate
-          your <u class="text-underline">brands image</u> and help you
-          <u class="text-underline">get the sale</u>
-        </p>
-      </div>
+    <!-- Team section -->
+    <section id="team-container" class="pt-[90px] px-[15px] team-section">
+      
     </section>
 
-    <section id="success" class="container">
-      <img class="" src="<%= require('./assets/images/success_img.png.png') %>" alt="Success" />
-      <div class="pt-[50px] text-left">
-        <span class="span-sub-title">Thinking "Outside the box"</span>
-        <h2 class="m-0 font-bold text-xl pt-[15px]">Troubles Growing Your Audience?</h2>
-        <p class="mt-[29px] paragraph-text text-paragraphFirst">
-          <u class="text-underline">Attract new followers</u> that are relevant to your objectives
-          by reaching <u class="text-underline"> outside your social media </u> bubble, and you'll
-          start to see a <u class="text-underline">quicker return on your investment</u>.
-        </p>
-        <p class="my-[35px] paragraph-text text-paragraphFirst">
-          Along with <u class="text-underline">captivating visuals</u>, our teams perform countless
-          <u class="text-underline">hours of research and planning</u> to deliver
-          <u class="text-underline">optimized marketing campaigns</u> that target your
-          <u class="text-underline">ideal audience</u> who are most likely to
-          <u class="text-underline">convert into leads</u>.
-        </p>
-        <p class="paragraph-text text-paragraphFirst mt-[35px] mb-[36px]">
-          By thoroughly planning your paid
-          <u class="text-underline">Social Media Advertising</u> campaign, we are able to ensure
-          that every penny of your <u class="text-underline">marketing budget is well spent</u>.
-        </p>
-      </div>
+    <!-- FAQ section -->
+    <section id="faq-container" class="pt-[120px] pb-[81px] px-[15px]">
+      
     </section>
 
-    <section id="social-trolls" class="container pb-[69.53px]">
-      <img
-        class=""
-        src="<%= require('./assets/images/social-trolls.png.png') %>"
-        alt="Social Trolls"
-      />
-      <div class="pt-[50px] pb-[39.65px] text-center">
-        <span class="span-sub-title">Keeping You Covered</span>
-        <h2 class="font-bold text-lg pt-[15px]">Social Gossiping Slowing You Down?</h2>
-        <p class="paragraph-text mt-[29.6px] text-paragraphFirst">
-          Staying on top of how your brand is being used is an important aspect to
-          <u class="text-underline">protect your identity and reputation</u>.
-        </p>
-        <p class="paragraph-text mt-[16.92px] text-paragraphFirst">
-          Our sophisticated <u class="text-underline">threat monitoring</u> system enables us to
-          <u class="text-underline">quickly identify threats</u> towards your brand and deal with
-          them to <u class="text-underline">prevent damage</u> to your reputation.
-        </p>
-        <p class="paragraph-text mt-[15px] mb-[16.39px] text-paragraphFirst">
-          The most common threats we encounter:
-        </p>
-        <div id="social-trolls-threats" class="flex flex-wrap justify-center"></div>
-      </div>
+    <!-- Guide section -->
+    <section id="guide-container" class="px-[15px] relative pt-[79px] pb-[79.78px]">
+      
     </section>
 
-    <section id="visually-impressive" class="bg-dark pt-[120px] pb-[35px] text-center">
-      <div class="container">
-        <span class="span-sub-title">Visually Impressive</span>
-        <h2 class="m-0 font-bold text-xl pt-[15px] pb-[70px] text-white">
-          We Can't Wait To Redefine Your Brand
-        </h2>
-      </div>
-
-      <div class="swiper-container swiper-container-with-navigation">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="<%= require('./assets/images/image 4.png') %>" alt="1" />
-            <img src="<%= require('./assets/images/SMM Meme - IG 3.png') %>" alt="5" />
-          </div>
-
-          <div class="swiper-slide">
-            <img src="<%= require('./assets/images/SMM Meme - IG 2.png') %>" alt="2" />
-            <img src="<%= require('./assets/images/image 3.png') %>" alt="6" />
-          </div>
-          <div class="swiper-slide">
-            <img src="<%= require('./assets/images/image 5.png') %>" alt="3" />
-            <img src="<%= require('./assets/images/pistachio-madness.png.png') %>" alt="7" />
-          </div>
-          <div class="swiper-slide">
-            <img src="<%= require('./assets/images/SMM Meme - IG 4.png') %>" alt="4" />
-            <img src="<%= require('./assets/images/image 7.png') %>" alt="8" />
-          </div>
-        </div>
-        <div class="pt-[23px] pb-[24px] relative flex items-start justify-center">
-          <h2 class="font-bold text-base text-white text-center">What Are You Waiting For?</h2>
-          <div class="relative w-max justify-center hidden">
-            <div class="swiper-button-prev block swiper-button -left-[10px]">
-              <img
-                class=""
-                src="<%= require('./assets/images/chevron-down.png') %>"
-                alt="Chevron left"
-              />
-            </div>
-            <div class="swiper-button-next block swiper-button right-0">
-              <img src="<%= require('./assets/images/chevron-up.png') %>" alt="Chevron right" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="visually-impressive__button" class="container"></div>
-    </section>
-
-    <section id="company" class="pt-[86.84px] pb-[80.83px] container">
-      <img
-        class="absolute left-0 z-0"
-        src="<%= require('./assets/images/company_shape.png.png') %>"
-        alt="Company shape"
-      />
-      <div class="pt-[80.64px] pb-[64.56px] z-10">
-        <span class="span-sub-title">Our Company</span>
-        <h2 class="font-bold text-lg pt-[15px]">We Create Creative Designs For Every Web Page</h2>
-        <p class="text-paragraphSecond leading-[27.2px]">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-          been the industry's standard.
-        </p>
-      </div>
-      <div>
-        <div class="h-full relative pb-[70px]">
-          <img src="<%= require('./assets/images/company_img01.png.png') %>" alt="Company image" />
-          <img
-            class="absolute -right-[15px] bottom-0"
-            src="<%= require('./assets/images/company_img02.png.png') %>"
-            alt="Company image"
-          />
-        </div>
-        <div class="pt-[50px]">
-          <h2 class="text-xxxl h2-gradient pb-[26px]">All Your Questions Are Here</h2>
-          <ul class="company-list text-left pb-[59.3px]">
-            <li>Seo quotes to inspire your campaign</li>
-            <li>Much easier to double your business</li>
-            <li>Free page speed insights tool to find out exactly</li>
-            <li>Seo quotes to inspire your campaign</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="container text-center bakery-section">
-      <img
-        class="mx-auto pb-[50px]"
-        src="<%= require('./assets/images/bakery 2.png') %>"
-        alt="Bakery"
-      />
-      <span class="span-sub-title">What We Do</span>
-      <h2 class="font-bold text-xl pt-[15px] pb-[20.6px]">
-        We design and develop web and mobile applications for our clients worldwide
-      </h2>
-      <p class="text-paragraphSecond leading-[27.2px]">
-        Lorem ipsum dolor sit amet, sed nulla ante amet, elementum tincidunt arcu sed laoreet,
-        natoque ac eget imperdiet. Ac scelerisque nibh dolores consectetuer,
-      </p>
-    </section>
-
-    <section class="pt-[139.59px] bg-[#F2FAFF] container">
-      <h2 class="text-lg pb-[24.18px]">Worldwide Best Digital Marketing Agency</h2>
-      <p class="text-paragraphSecond leading-[27.2px] pb-[48.23px]">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-        galley of type and
-      </p>
-      <form id="form" class="bg-white py-[31px] px-[26px] rounded-[20px]" action="">
-        <h4 class="text-2xl text-left pb-[25px] leading-[30px]">Free Consultation</h4>
-        <input class="form-input" type="text" name="name" id="name" placeholder="Name" />
-        <input
-          class="form-input"
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Email Address"
-        />
-        <input class="form-input" type="text" name="phone" id="phone" placeholder="Phone Number" />
-        <div class="custom-select relative w-full flex items-center">
-          <select class="appearance-none outline-none w-full h-full">
-            <option>Subject</option>
-            <option value="">Grow Followers</option>
-            <option value="">Increase Leads</option>
-            <option value="">Strengthen Engagement</option>
-            <option value="">Built Brand Awareness</option>
-            <option value="">Learn More About Social Media</option>
-            <option value="">Basic Presence</option>
-          </select>
-          <div class="pointer-events-none absolute right-[22.5px] top-[22.8px]">
-            <!-- Tutaj możesz umieścić własną ikonę strzałki -->
-            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-              <path
-                d="M5.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.576 0 0.436 0.445 0.408 1.197 0 1.615l-4.695 4.502c-0.408 0.392-1.008 0.392-1.416 0l-4.695-4.502c-0.408-0.418-0.436-1.17 0-1.615z"
-              />
-            </svg>
-          </div>
-        </div>
-      </form>
-    </section>
-
-    <section class="pt-[90px] container team-section">
-      <h2 class="text-xl pb-[30px]">Meet The Squad</h2>
-      <p class="text-paragraphSecond leading-[27.2px] pb-[49.75px]">
-        Lorem ipsum dolor sit amet, sed nulla ante amet, elementum tincidunt arcu sed laoreet,
-        natoque ac eget imperdiet. Ac scelerisque nibh dolores
-      </p>
-      <div class="swiper-container swiper-container-with-pagination">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide swiper-silde-pagination">
-            <img src="<%= require('./assets/images/inner_team03.jpg.png') %>" alt="Inner team" />
-            <div class="swiper-silde-pagination__content">
-              <h2 class="text-sm">Ryan Vetrovs</h2>
-              <span>CEO Kawasaki Inc.</span>
-            </div>
-          </div>
-          <div class="swiper-slide swiper-silde-pagination">
-            <img src="<%= require('./assets/images/inner_team04.jpg.png') %>" alt="Inner team" />
-            <div class="swiper-silde-pagination__content">
-              <h2 class="text-sm">Emerson Saris</h2>
-              <span>CEO Kawasaki Inc.</span>
-            </div>
-          </div>
-          <div class="swiper-slide swiper-silde-pagination">
-            <img src="<%= require('./assets/images/inner_team05.jpg.png') %>" alt="Inner team" />
-            <div class="swiper-silde-pagination__content">
-              <h2 class="text-sm">Lindsey Schleifer</h2>
-              <span>CEO Kawasaki Inc.</span>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
-
-    <section class="pt-[120px] pb-[81px] container">
-      <img class="pb-[25px]" src="<%= require('./assets/images/faq_img.png.png') %>" alt="FAQ" />
-      <h2 class="text-xl text-left pb-5">All Your Questions Are Here</h2>
-      <h3
-        class="h2-gradient text-left text-[24px] leading-[28.8px] font-medium pt-[19.23px] pr-[19px]"
-      >
-        & Knock Me Directly to Know More
-      </h3>
-      <p class="text-paragraphSecond text-left leading-[27.2px] pr-4">
-        Lorem ipsum dolor sit amet, sed nulla ante amet, elementum tincidunt arcu sed laoreet,
-        natoque ac eget imperdiet. Ac scelerisque nibh dolores consectetuer,
-      </p>
-      <div class="accordion pt-[50px]">
-        <div class="accordion-item">
-          <button class="accordion-button">What's the difference between Pro and Free?</button>
-          <div class="accordion-content">
-            <p>
-              Lorem Ipsum Dolor Sit Amet, Sed Nulla Ante Amet, Elementum Tincidunt Arcu Sed Laoreet,
-              Natoque Ac Eget Imperdiet. Ac Sclerisque Nibh Dolores Consectetuer,
-            </p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-button">What's the difference between Pro and Free?</button>
-          <div class="accordion-content">
-            <p>
-              Lorem Ipsum Dolor Sit Amet, Sed Nulla Ante Amet, Elementum Tincidunt Arcu Sed Laoreet,
-              Natoque Ac Eget Imperdiet. Ac Sclerisque Nibh Dolores Consectetuer,
-            </p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-button">What's the difference between Pro and Free?</button>
-          <div class="accordion-content">
-            <p>
-              Lorem Ipsum Dolor Sit Amet, Sed Nulla Ante Amet, Elementum Tincidunt Arcu Sed Laoreet,
-              Natoque Ac Eget Imperdiet. Ac Sclerisque Nibh Dolores Consectetuer,
-            </p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-button">What's the difference between Pro and Free?</button>
-          <div class="accordion-content">
-            <p>
-              Lorem Ipsum Dolor Sit Amet, Sed Nulla Ante Amet, Elementum Tincidunt Arcu Sed Laoreet,
-              Natoque Ac Eget Imperdiet. Ac Sclerisque Nibh Dolores Consectetuer,
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container pt-[79px] pb-[79.78px]">
-      <h2 class="text-[52.7px] leading-[42.2px] pb-[34.4px]">Accelerate</h2>
-      <h2 class="text-[#FF7012] text-[32.7px] leading-[26.1px] pb-[9px]">Your Social Strategy</h2>
-      <p class="text-[#2A2A2A] text-[20.1px] leading-[20.1px] pb-[56px]">
-        Find out how to make social media work for you. We'll send you a PDF that explains different
-        marketing strategies to help your business grow.
-      </p>
-      <div class="pb-[49px]">
-        <form class="pdf-form" action="">
-          <input class="pdf-input" type="email" placeholder="Enter your e-mail address" />
-          <button class="pdf-button">Download PDF</button>
-        </form>
-      </div>
-      <p class="text-[12px] leading-[20.5px] text-[#bbb]">
-        Upon supplying us with your e-mail, we will send you a link to download this PDF. We will
-        also follow up with you within 5 days to see if there is any way we can help you and we'll
-        sign you up to receive updated tips and tricks for growing your social media but don't
-        worry, we only send this newsletter once a month, and you can easily unsubscribe from all
-        communications at any time.
-      </p>
-    </section>
-
-    <footer class="pt-[100px] text-center text-[#C5C7CB] container bg-[#1F1D28]">
-      <div class="pb-10">
-        <img
-          class="pb-[33.61px] mx-auto"
-          src="<%= require('./assets/images/logo-footer.png') %>"
-          alt="Logo"
-        />
-        <span class="text-[16px] leading-[27.2px] pb-[8px]">For Support</span>
-        <h2 class="text-[20px] leading-6 text-white">0123 - 567 - 7650</h2>
-      </div>
-      <div class="pb-5">
-        <h4 class="font-bold text-[20px] leading-6 pb-4 text-white">Primary Pages</h4>
-        <ul class="text-[15px] leading-[25.5px]">
-          <li class="mb-[10px]"><a href="/">Home</a></li>
-          <li class="mb-[10px]"><a href="/about">About</a></li>
-          <li class="mb-[10px]"><a href="/contact">Contact</a></li>
-          <li><a href="/service">Service</a></li>
-        </ul>
-      </div>
-      <div class="pb-5">
-        <h4 class="font-bold text-[20px] leading-6 pb-4 text-white">Quick Access</h4>
-        <ul class="text-[15px] leading-[25.5px]">
-          <li class="mb-[10px]"><a href="/about">About</a></li>
-          <li class="mb-[10px]"><a href="/pricing">Pricing</a></li>
-          <li class="mb-[10px]"><a href="/contact">Contact</a></li>
-          <li><a href="/demo">Request for Demo</a></li>
-        </ul>
-      </div>
-      <div class="pb-10">
-        <h4 class="font-bold text-[20px] leading-6 pb-[30px] text-white">Company</h4>
-        <ul class="text-[15px] leading-[25.5px]">
-          <li class="mb-[25px] flex  justify-center">
-            <img
-              class="mr-[13px] h-6"
-              src="<%= require('./assets/images/phone-call-01.png') %>"
-              alt="Phone"
-            />8 (495) 989—20—11
-          </li>
-          <li class="mb-[25px] flex justify-center">
-            <img
-            class="mr-[13px] h-6"
-              src="<%= require('./assets/images/mail-02.png') %>"
-              alt="Email"
-            />contact@socialseal.com
-          </li>
-          <li class="flex  justify-center">
-            <img
-            class="mr-[13px] h-6"
-              src="<%= require('./assets/images/marker-pin-04.png') %>"
-              alt="Pin"
-            />Ranelagh Place, Liverpool, L3 5UL, England
-          </li>
-        </ul>
-      </div>
-
-    </footer>
-    <footer class="py-[21px] bg-[#24222E] container text-center">
-      <p class="text-[14px] leading-[23.8px] text-white">© 2023 Social Seal. All Rights Reserved</p>
+    <!-- Top Footer section -->
+    <footer id="top-footer-container" class="pt-[100px] text-center text-[#C5C7CB] px-[15px] bg-[#1F1D28]">
+      
     </footer>
 
-    <div id="root"></div>
+    <!-- Bottom Footer Section -->
+    <footer id="bottom-footer-container" class="py-[21px] bg-[#24222E] px-[15px] text-center">
+
+    </footer>
   </body>
 </html>

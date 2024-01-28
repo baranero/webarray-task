@@ -6,9 +6,9 @@
 /* Swiper CSS import */
 @import "swiper/swiper-bundle.css";
 
-@layer base {
-  html {
-    @apply font-poppins;
+
+  html, body {
+    @apply font-poppins w-full m-0;
   }
 
   h2 {
@@ -23,13 +23,13 @@
   .span-sub-title {
     @apply text-[18px] leading-[30.6px] text-orangeDark font-medium;
   }
-}
+
 
 .header {
   display: flex;
   z-index: 30;
   justify-content: space-between;
-  position: fixed;
+
   width: 100%;
   align-items: center;
   background: #fff;

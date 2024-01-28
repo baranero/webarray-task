@@ -5,9 +5,11 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    container: {
-      center: true,
-      padding: '15px', // to zastosuje 15px padding na osi X dla wszystkich kontenerów
+    screens: {
+      sm: '390px',
+      md: '768px',
+      lg: '1440px',
+      xl: '1920px',
     },
     extend: {
       fontFamily: {

@@ -1,10 +1,46 @@
 // Importing styles and components
 import "./style.css";
-import Button from "./components/button";
+import Button from "./components/ui/button";
 import ScrollReveal from "scrollreveal";
 import Swiper from "swiper";
 import { Autoplay, Navigation, Grid, Pagination } from "swiper/modules";
-import createThreadCard from "./components/threats-card";
+import createThreadCard from "./components/ui/threats-card";
+import header from './components/header.html'
+import banner from './components/banner.html'
+import brandArea from './components/brand-area.html'
+import stats from './components/stats.html'
+import expertise from './components/expertise.html'
+import risk from './components/risk.html'
+import success from './components/success.html'
+import social from './components/social.html'
+import visual from './components/visual.html'
+import company from './components/company.html'
+import bakery from './components/bakery.html'
+import form from './components/form.html'
+import team from './components/team.html'
+import faq from './components/faq.html'
+import guide from './components/guide.html'
+import topFooter from './components/top-footer.html'
+import bottomFooter from './components/bottom-footer.html'
+
+// Load partials .html in index.html
+document.getElementById('header-container').innerHTML = header;
+document.getElementById('banner-container').innerHTML = banner;
+document.getElementById('brand-area-container').innerHTML = brandArea;
+document.getElementById('stats-container').innerHTML = stats;
+document.getElementById('expertise-container').innerHTML = expertise;
+document.getElementById('risk-container').innerHTML = risk;
+document.getElementById('success-container').innerHTML = success;
+document.getElementById('social-container').innerHTML = social;
+document.getElementById('visual-container').innerHTML = visual;
+document.getElementById('company-container').innerHTML = company;
+document.getElementById('bakery-container').innerHTML = bakery;
+document.getElementById('form-container').innerHTML = form;
+document.getElementById('team-container').innerHTML = team;
+document.getElementById('faq-container').innerHTML = faq;
+document.getElementById('guide-container').innerHTML = guide;
+document.getElementById('top-footer-container').innerHTML = topFooter;
+document.getElementById('bottom-footer-container').innerHTML = bottomFooter;
 
 // Function to toggle mobile menu visibility
 function toggleMobileMenu() {
@@ -87,11 +123,14 @@ const swiperWithPagination = new Swiper(".swiper-container-with-pagination", {
 const viewMoreButton = Button("View More");
 document.getElementById("view-more-button").appendChild(viewMoreButton);
 
-const startReplyingButton = Button("Start Replying Faster");
-document.getElementById("team").appendChild(startReplyingButton);
 
+// Do poprawy
+const startReplyingButton = Button("Start Replying Faster");
+document.getElementById("risk-container").appendChild(startReplyingButton);
+
+// Do poprawy
 const successButton = Button("Start Driving Sales");
-document.getElementById("success").appendChild(successButton);
+document.getElementById("success-container").appendChild(successButton);
 
 // Data for threat cards
 let cardsData = [
@@ -114,12 +153,12 @@ cardsData.forEach((card) => {
 });
 
 const protectBrandButton = Button("Protect Your Brand");
-document.getElementById("social-trolls").appendChild(protectBrandButton);
+document.getElementById("social-container").appendChild(protectBrandButton);
 
 document.getElementById("visually-impressive__button").appendChild(protectBrandButton);
 
 const discoverMoreButton = Button("Discover More");
-document.getElementById("company").appendChild(discoverMoreButton);
+document.getElementById("company-container").appendChild(discoverMoreButton);
 
 const consultationButton = Button("Consultation");
 document.getElementById("form").appendChild(consultationButton);

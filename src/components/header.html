@@ -1,0 +1,34 @@
+<img src="../assets/images/logo.png" alt="Logo" />
+<div class="flex items-center">
+  <button
+    class="hidden sm:block mr-10 text-[16px] leading-[16px] text-white py-[19px] px-[33px] bg-orangeDark rounded-[20px]"
+  >
+    Speak With Us!
+  </button>
+  <img
+    class="h-[31px]"
+    src="../assets/images/mobile-nav-toggler.png"
+    alt="Mobile Nav Toggler"
+    onclick="toggleMobileMenu()"
+  />
+</div>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="mobile-menu hidden">
+  <nav class="mobile-menu-nav">
+    <div class="mobile-menu-nav-container py-[30px] px-[25px]">
+      <img class="w-[126px]" src="../assets/images/logo.png" alt="Logo" />
+      <img
+        class="h-5 mt-[3px]"
+        src="../assets/images/close-icon.png"
+        alt="Close button"
+        onclick="toggleMobileMenu()"
+      />
+    </div>
+    <a class="mobile-menu-nav__link" href="#management">Management</a>
+    <a class="mobile-menu-nav__link" href="#marketing">Marketing</a>
+    <a class="mobile-menu-nav__link" href="#increase-sales">Increase Sales</a>
+    <a class="mobile-menu-nav__link" href="services">Services</a>
+    <a class="mobile-menu-nav__link border-b" href="plans-and-pricing">Plans & Pricing</a>
+  </nav>
+</div>
