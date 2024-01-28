@@ -22,6 +22,7 @@ import faq from './components/faq.html'
 import guide from './components/guide.html'
 import topFooter from './components/top-footer.html'
 import bottomFooter from './components/bottom-footer.html'
+import { toggleMobileMenu } from "./js/mobile-menu";
 
 // Load partials .html in index.html
 document.getElementById('header-container').innerHTML = header;
@@ -42,11 +43,8 @@ document.getElementById('guide-container').innerHTML = guide;
 document.getElementById('top-footer-container').innerHTML = topFooter;
 document.getElementById('bottom-footer-container').innerHTML = bottomFooter;
 
-// Function to toggle mobile menu visibility
-function toggleMobileMenu() {
-  let menu = document.getElementById("mobileMenu");
-  menu.classList.toggle("show");
-}
+// Mobile menu
+window.toggleMobileMenu = toggleMobileMenu;
 
 // Function to animate numerical values
 function animateValue(obj, start, end, duration) {
@@ -63,7 +61,7 @@ function animateValue(obj, start, end, duration) {
 }
 
 // Initializing components
-window.toggleMobileMenu = toggleMobileMenu;
+
 
 const viewPlansButton = Button("View Our Plans");
 document.getElementById("banner-section").appendChild(viewPlansButton);

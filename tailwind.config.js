@@ -12,6 +12,9 @@ module.exports = {
       xl: '1921px',
     },
     extend: {
+      spacing: {
+        '15px': '15px'
+      },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
@@ -31,6 +34,7 @@ module.exports = {
         paragraphFirst: "#727272",
         paragraphSecond: "#666666",
         underline: "#191919",
+        menu: "#0b0b0b"
       }
     },
   },
