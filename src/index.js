@@ -46,6 +46,10 @@ document.getElementById('bottom-footer-container').innerHTML = bottomFooter;
 // Mobile menu
 window.toggleMobileMenu = toggleMobileMenu;
 
+// Initializing components
+const viewPlansButton = Button("View Our Plans");
+document.getElementById("banner-container").appendChild(viewPlansButton);
+
 // Function to animate numerical values
 function animateValue(obj, start, end, duration) {
   let startTimestamp = null;
@@ -60,11 +64,7 @@ function animateValue(obj, start, end, duration) {
   window.requestAnimationFrame(step);
 }
 
-// Initializing components
 
-
-const viewPlansButton = Button("View Our Plans");
-document.getElementById("banner-section").appendChild(viewPlansButton);
 
 // Initializing ScrollReveal for animations
 const sr = ScrollReveal();

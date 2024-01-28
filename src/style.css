@@ -28,22 +28,9 @@
     @apply translate-x-0;
   }
 
-
-
   .span-sub-title {
     @apply text-[18px] leading-[30.6px] text-orangeDark font-medium;
   }
-
-.banner__button {
-  background-color: #f79d5a;
-  border: none;
-  border-radius: 32px;
-  color: #fff1e7;
-  font-size: 18px;
-  line-height: 21.6px;
-  margin-top: 90px;
-  padding: 23px 21px 22.19px;
-}
 
 /* Logo carousel styles */
 .logo-carousel {
