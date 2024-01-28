@@ -71,12 +71,12 @@ const sr = ScrollReveal();
 sr.reveal(".stat-card", {
   beforeReveal: function (el) {
     const number = el.querySelector(".stat-number");
-    number.textContent = ""; // Ukryj wartość początkową przed rozpoczęciem animacji
+    number.textContent = "";
   },
   afterReveal: function (el) {
     const number = el.querySelector(".stat-number");
-    const endValue = parseInt(number.getAttribute("data-value")); // Przechowuj końcową wartość w atrybucie 'data-value'
-    animateValue(number, 0, endValue, 2000); // Rozpocznij animację od 0 do endValue w ciągu 2000 ms
+    const endValue = parseInt(number.getAttribute("data-value")); 
+    animateValue(number, 0, endValue, 2000); 
   },
 });
 
@@ -84,7 +84,7 @@ sr.reveal(".stat-card", {
 const contactUsButton = Button("Contact Us");
 document.getElementById("stats-section").appendChild(contactUsButton);
 
-// Initializing Swiper for sliding elements
+// Swiper with 5s autoplay
 const swiper = new Swiper(".swiper-container-without-navigation", {
   modules: [Autoplay],
   loop: true,
@@ -97,6 +97,7 @@ const swiper = new Swiper(".swiper-container-without-navigation", {
   spaceBetween: 24,
 });
 
+// Swiper with navigation and 8s autoplay
 const swiperWithNavigation = new Swiper(".swiper-container-with-navigation", {
   modules: [Autoplay, Navigation, Grid],
   slidesPerView: "auto",
@@ -104,16 +105,17 @@ const swiperWithNavigation = new Swiper(".swiper-container-with-navigation", {
   loop: true,
   spaceBetween: 22.4,
   autoplay: {
-    delay: 8000, // Zmiana na 8 sekund
+    delay: 8000,
     disableOnInteraction: false,
   },
 
   navigation: {
-    nextEl: ".swiper-button-next", // Klasa przycisku "następny slajd"
-    prevEl: ".swiper-button-prev", // Klasa przycisku "poprzedni slajd"
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });
 
+// Swiper with pagination without autoplay
 const swiperWithPagination = new Swiper(".swiper-container-with-pagination", {
   modules: [Pagination],
   loop: true,
@@ -122,14 +124,15 @@ const swiperWithPagination = new Swiper(".swiper-container-with-pagination", {
   },
 });
 
+// Expertise section button
 const viewMoreButton = Button("View More");
 document.getElementById("view-more-button").appendChild(viewMoreButton);
 
-// Do poprawy
+// Risk section button
 const startReplyingButton = Button("Start Replying Faster");
 document.getElementById("risk-container").appendChild(startReplyingButton);
 
-// Do poprawy
+// Success section button
 const successButton = Button("Start Driving Sales");
 document.getElementById("success-container").appendChild(successButton);
 

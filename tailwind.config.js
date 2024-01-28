@@ -12,6 +12,9 @@ module.exports = {
       xl: "1921px",
     },
     extend: {
+      backgroundImage: {
+        'check-icon': "url('./assets/images/check_icon.png.png')",
+      },
       borderRadius: {
         DEFAULT: "20px",
         stats: "10px",

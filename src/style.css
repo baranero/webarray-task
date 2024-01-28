@@ -76,42 +76,20 @@ section {
   @apply text-[18px] leading-[30.6px] text-orangeDark font-medium;
 }
 
-.paragraph-text {
-  font-size: 19.2px;
-  line-height: 32.6px;
-  font-weight: 300;
-}
-
-.h2-gradient {
-  background: #121fcf;
-  background: linear-gradient(to right, #6071d9 40%, #aa676f 66%, #ccb41a 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.gradient {
+  @apply bg-[#121fcf] text-transparent bg-clip-text bg-gradient-to-r from-[#6071d9] via-[#aa676f] to-[#ccb41a];
 }
 
 .company-list li {
-  list-style-type: none;
-  position: relative;
-  padding-left: 39px;
-  color: #959eb6;
-  font-size: 18px;
-  line-height: 25.2px;
+  @apply list-none relative pl-[39px] text-[#959eb6] text-[18px] leading-[25.2px];
 }
 
 .company-list li:not(:last-child) {
-  margin-bottom: 15.4px;
+  @apply mb-[15.4px];
 }
 
 .company-list li::before {
-  content: ""; /* Pusty content, ponieważ używamy tła */
-  position: absolute; /* Pozycjonuje pseudoelement absolutnie */
-  left: 0; /* Pozycjonuje znacznik na początku elementu li */
-  top: 0; /* Ajustowanie pozycji znacznika */
-  width: 24px; /* Szerokość obrazu znacznika */
-  height: 24px; /* Wysokość obrazu znacznika */
-  background-image: url("./assets/images/check_icon.png.png"); /* Ścieżka do obrazu */
-  background-size: cover; /* Aby obraz pokrywał cały pseudoelement */
+  @apply content-[""] absolute left-0 top-0 w-6 h-6 bg-check-icon bg-cover;
 }
 
 .bakery-section {
@@ -121,24 +99,17 @@ section {
 
 .form-input,
 select {
-  padding: 22.5px 29px;
-  border-radius: 13px;
-  background: #fbfdff;
-  border: 1px solid #d5d5d5;
-  color: #0b0b0b;
-  font-size: 16px;
-  width: 100%;
-  margin-bottom: 20px;
+  @apply py-[22.5px] px-[29px] rounded-[13px] bg-[#fbfdff] border border-[#d5d5d5] text-[#0b0b0b] text-[16px] w-full mb-5;
 }
 
 select {
-  padding-right: 71px;
+  @apply pr-[71px];
 }
 
-/* Dodaj ten kod do twoich stylów (może być wewnątrz <style> w head lub w pliku CSS) */
 .custom-select {
-  position: relative;
+  @apply relative;
 }
+
 .custom-select select {
   -webkit-appearance: none; /* Usuwa domyślną strzałkę w Safari i Chrome */
   -moz-appearance: none; /* Usuwa domyślną strzałkę w Firefox */
@@ -146,45 +117,32 @@ select {
   padding-right: 30px; /* Odstęp dla strzałki od prawej krawędzi */
 }
 .custom-select svg {
-  height: 25px; /* Wysokość strzałki */
-  width: auto;
-  color: #676879; /* Odstęp strzałki od krawędzi kontenera */
+  @apply h-[25px] w-auto text-[#676879];
 }
 
 .form-input::placeholder,
 select::placeholder {
-  color: #0b0b0b;
+  @apply text-[#0b0b0b];
 }
 
 .swiper-container-with-pagination {
-  position: relative;
+  @apply relative;
 }
 
 .swiper-silde-pagination {
-  width: 100%;
-  padding-bottom: 40px;
-  border-radius: 20px;
-  position: relative;
-  z-index: 10;
+  @apply w-full pb-10 rounded relative z-10;
 }
 .swiper-silde-pagination img {
   border-radius: 20px;
 }
 
 .swiper-pagination-bullet {
-  width: 16px;
-  height: 16px;
-  border: 2px solid #d9d9d9;
-  background: #fff;
-  opacity: 1;
+  @apply w-4 h-4 border-2 border-[#d9d9d9] bg-white opacity-100;
 }
 
 .swiper-pagination-bullet-active {
-  width: 14px;
-  height: 14px;
-  border: 3px solid white;
-  box-shadow: 0 0 0 2px orange;
-  background-color: #f89e52;
+
+  @apply w-[14px] h-[14px] border-[3px] border-white bg-orangeDark shadow-[0_0_0_2px_rgb(255,165,0)]
 }
 
 .swiper-silde-pagination__content {
