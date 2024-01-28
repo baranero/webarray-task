@@ -6,147 +6,80 @@
 /* Swiper CSS import */
 @import "swiper/swiper-bundle.css";
 
-
-  html, body {
-    @apply font-poppins w-full m-0;
-  }
-
-  h2 {
-    @apply font-bold;
-  }
-
-  div,
-  section {
-    @apply text-center;
-  }
-
-  .header {
-    @apply shadow-[0_10px_15px_0_rgba(25,25,25,0.1)];
-  }
-
-  .logo-carousel {
-    @apply shadow-[0_44px_64px_0_rgba(0,0,0,0.15)]
-  }
-
-  .show {
-    @apply translate-x-0;
-  }
-
-  .span-sub-title {
-    @apply text-[18px] leading-[30.6px] text-orangeDark font-medium;
-  }
-
-/* Stat card styles */
-.stat-card {
-  background-color: #fff;
-  border-color: #f3f3f3;
-  border-radius: 10px;
-  margin: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-width: 220px;
-  min-height: 220px;
-  position: relative;
+html,
+body {
+  @apply font-poppins w-full m-0;
 }
 
-.stat-number {
-  font-size: 44px;
-  font-weight: bold;
-  z-index: 10;
+h2 {
+  @apply font-bold;
 }
 
-.stat-text {
-  color: #6b645d;
-  font-size: large;
-  z-index: 10;
+div,
+section {
+  @apply text-center;
 }
 
-.stat-card img {
-  position: absolute;
-  bottom: 0;
+.header {
+  @apply shadow-[0_10px_15px_0_rgba(25,25,25,0.1)];
 }
 
-/* Keyframes for rotation animation */
-@keyframes rotateAnimation {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+.logo-carousel {
+  @apply shadow-[0_44px_64px_0_rgba(0,0,0,0.15)];
 }
 
-.rotating-element {
-  animation: rotateAnimation 2s ease-in-out infinite;
+.show {
+  @apply translate-x-0;
 }
 
-/* Additional text styles */
+.content {
+  @apply text-[19.2px] leading-[32.6px] font-light;
+}
+
 .sup-title {
-  font-size: 16px;
-  line-height: 34px;
-  margin-bottom: 20px;
-  font-weight: 500;
+  @apply text-[16px] leading-[34px] mb-5 font-medium;
+}
+
+.swiper-container {
+  @apply w-full overflow-hidden;
+}
+
+.swiper-container-with-navigation {
+  @apply px-5;
+}
+
+.swpier-silde {
+  @apply w-[300px];
+}
+
+.swiper-slide img + img {
+  @apply mt-[29px];
+}
+
+.swiper-slide img {
+  @apply align-top w-full h-auto m-0 p-0;
+}
+
+.swiper-button {
+  @apply w-8 h-8 bg-[#ebebeb80] rounded-2xl text-[#2d2d48] flex justify-center items-center m-0 p-0 relative;
+}
+
+.swiper-button::after {
+  @apply hidden;
+}
+
+.team-image {
+  @apply absolute z-20;
+}
+
+.span-sub-title {
+  @apply text-[18px] leading-[30.6px] text-orangeDark font-medium;
 }
 
 .paragraph-text {
   font-size: 19.2px;
   line-height: 32.6px;
   font-weight: 300;
-}
-
-/* Swiper container styles */
-.swiper-container {
-  width: 100%;
-  overflow: hidden; /* Prevent content from spilling outside the container */
-}
-
-.swiper-container-with-navigation {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.swiper-slide {
-  width: 300px;
-}
-
-.swiper-slide img + img {
-  margin-top: 29px;
-}
-
-.swiper-button {
-  width: 32px;
-  height: 32px;
-  background: #ebebeb80;
-  border-radius: 16px;
-  color: #2d2d48;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-.swiper-button::after {
-  display: none;
-}
-
-.swiper-slide img {
-  vertical-align: top; /* Wyrównuje zdjęcie do górnej krawędzi */
-  width: 100%; /* Opcjonalnie, aby zdjęcie wypełniło całą szerokość slajdu */
-  height: auto; /* Opcjonalnie, aby zachować proporcje zdjęcia */
-  margin: 0; /* Usuwa wszelkie marginesy */
-  padding: 0; /* Usuwa wszelkie paddingi */
-}
-
-.team-image {
-  position: absolute;
-  z-index: 20;
 }
 
 .h2-gradient {
@@ -285,7 +218,7 @@ select::placeholder {
   box-shadow: 0 15px 30px 0 rgba(61, 90, 125, 0.05);
   margin-bottom: 20px;
   border-radius: 20px;
-  border: 1px solid #F4F4F4;
+  border: 1px solid #f4f4f4;
 }
 
 .accordion-button {
@@ -302,12 +235,12 @@ select::placeholder {
   align-items: center;
   flex-direction: row-reverse;
   position: relative;
-  border: 1px solid #F4F4F4;
+  border: 1px solid #f4f4f4;
 }
 
 .accordion-button::after {
   content: url("./assets/images/plus.png");
- /* Umieść z prawej strony przycisku */
+  /* Umieść z prawej strony przycisku */
   margin-right: 13px;
   min-width: 33px; /* Szerokość obrazu znacznika */
   min-height: 33px;
@@ -320,7 +253,6 @@ select::placeholder {
 
 .accordion-button.active::after {
   content: url("./assets/images/minus.png");
-
 }
 
 .accordion-content {
@@ -356,19 +288,18 @@ select::placeholder {
 }
 
 .pdf-input {
-  border: 1px solid #EFEFEF;
+  border: 1px solid #efefef;
   padding: 20.26px 0;
   text-align: center;
-  border-radius: 20px 20px 0 0 ;
+  border-radius: 20px 20px 0 0;
   box-shadow: 0 34px 64px 0 rgba(20, 28, 49, 0.11);
 }
-
 
 .pdf-button {
   padding: 24px 0;
   border-radius: 0 0 20px 20px;
   color: #fff;
-  border: 1px solid #3482FF;
-background: #3482FF;
-box-shadow: 0 34px 64px 0 rgba(20, 28, 49, 0.11);
+  border: 1px solid #3482ff;
+  background: #3482ff;
+  box-shadow: 0 34px 64px 0 rgba(20, 28, 49, 0.11);
 }
