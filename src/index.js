@@ -82,7 +82,7 @@ sr.reveal(".stat-card", {
 
 // Stats section button
 const contactUsButton = Button("Contact Us");
-document.getElementById("stats-section").appendChild(contactUsButton);
+document.getElementById("stats-button").appendChild(contactUsButton);
 
 // Swiper with 5s autoplay
 const swiper = new Swiper(".swiper-container-without-navigation", {
@@ -95,6 +95,12 @@ const swiper = new Swiper(".swiper-container-without-navigation", {
   slidesPerView: "auto",
   centeredSlides: false,
   spaceBetween: 24,
+  breakpoints: {
+
+    600: {
+      slidesPerView: 2,
+    }
+  }
 });
 
 // Swiper with navigation and 8s autoplay
@@ -156,10 +162,11 @@ cardsData.forEach((card) => {
   createThreadCard(threatsCards, card.text, card.backgroundColor, card.borderColor);
 });
 
-const protectBrandButton = Button("Protect Your Brand");
-document.getElementById("social-container").appendChild(protectBrandButton);
+const protectBrandButtonSocial = Button("Protect Your Brand");
+document.getElementById("social-container").appendChild(protectBrandButtonSocial);
 
-document.getElementById("visually-impressive__button").appendChild(protectBrandButton);
+const protectBrandButtonVisual = Button("Protect Your Brand");
+document.getElementById("visually-impressive__button").appendChild(protectBrandButtonVisual);
 
 const discoverMoreButton = Button("Discover More");
 document.getElementById("company-container").appendChild(discoverMoreButton);

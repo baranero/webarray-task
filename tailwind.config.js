@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     screens: {
       sm: "391px",
-      md: "769px",
+      md: "600px",
       lg: "1441px",
       xl: "1921px",
     },
@@ -27,12 +27,17 @@ module.exports = {
       },
       animation: {
         carousel: "carousel 15s linear infinite",
+        tabletCarousel: "tabletCarousel 15s linear infinite",
         rotate: "rotate 2s ease-in-out infinite"
       },
       keyframes: {
         carousel: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-272%)" },
+        },
+        tabletCarousel: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-142%)" },
         },
         rotate: {
           '0%': { transform: "rotate(0deg)" },
